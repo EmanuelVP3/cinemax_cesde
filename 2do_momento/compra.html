@@ -28,8 +28,15 @@
             <input type="text" id="nombreCliente" name="nombreCliente" placeholder="Ej: Juan Pérez" />
           </p>
           <p>
-            <label for="tituloPelicula">Título de la Película:</label>
-            <input type="text" id="tituloPelicula" name="tituloPelicula" placeholder="Ej: Interstellar" />
+            <label for="tituloPelicula">Película:</label>
+            <select id="tituloPelicula" name="tituloPelicula">
+              <option value="">-- Elige una película --</option>
+              <option value="dune2">Dune: Parte 2 — $22.000</option>
+              <option value="godzilla">Godzilla vs. Kong — $22.000</option>
+              <option value="insideout2">Inside Out 2 — $15.000</option>
+              <option value="oppenheimer">Oppenheimer — $19.000</option>
+              <option value="lotr">El Señor de los Anillos — $19.000</option>
+            </select>
           </p>
           <p>
             <label for="cantidadTickets">Cantidad de Tickets:</label>

@@ -130,6 +130,43 @@ iframe {
 #login:target, #registro:target {
   display: block;
 }
+.modal-cine {
+  display: none;
+}
+.modal-cine:target {
+  display: flex;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 1000;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.escenario-cine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+.crispetas {
+  font-size: 80px;
+}
+.cerrar-cine {
+  color: white;
+  background-color: #e74c3c;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.cerrar-cine:hover {
+  background-color: #c0392b;
+}
 @media (max-width: 768px) {
   main {
     flex-direction: column;

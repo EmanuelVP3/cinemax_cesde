@@ -56,39 +56,42 @@
           🕐 Lunes a Domingo: 10:00 AM – 11:00 PM
         </address>
         <form action="">
-          <p>
-            <label for="nombre">Tu Nombre:</label>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Tu Nombre:</label>
             <input
               type="text"
+              class="form-control"
               id="nombre"
               name="nombre"
               placeholder="Ej: María Gómez"
               required
             />
-          </p>
-          <p>
-            <label for="email">Tu Correo Electrónico:</label>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Tu Correo Electrónico:</label>
             <input
               type="email"
+              class="form-control"
               id="email"
               name="email"
               placeholder="ejemplo@correo.com"
               required
             />
-          </p>
-          <p>
-            <label for="mensaje">Tu Mensaje:</label>
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Tu Mensaje:</label>
             <textarea
+              class="form-control"
               id="mensaje"
               name="mensaje"
               rows="5"
               placeholder="Escribe tu mensaje aquí..."
               required
             ></textarea>
-          </p>
-          <p>
-            <button type="submit">Enviar Mensaje</button>
-          </p>
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-danger rounded-pill fw-bold">Enviar Mensaje</button>
+          </div>
         </form>
       </section>
     </main>

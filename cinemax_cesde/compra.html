@@ -44,19 +44,25 @@
     <main>
       <section id="compra">
         <h2>🎟️ Formulario de Compra de Tickets</h2>
+        <!-- Formulario con clases de Bootstrap -->
         <form action="">
-          <p>
-            <label for="nombreCliente">Nombre del Cliente:</label>
+          <!-- mb-3 = margin-bottom 3 (espaciado entre campos) -->
+          <div class="mb-3">
+            <!-- form-label = estilo Bootstrap para etiquetas -->
+            <label for="nombreCliente" class="form-label">Nombre del Cliente:</label>
+            <!-- form-control = estilo Bootstrap para inputs (bordes redondeados, tamaño uniforme) -->
             <input
               type="text"
+              class="form-control"
               id="nombreCliente"
               name="nombreCliente"
               placeholder="Ej: Juan Pérez"
             />
-          </p>
-          <p>
-            <label for="tituloPelicula">Película:</label>
-            <select id="tituloPelicula" name="tituloPelicula">
+          </div>
+          <div class="mb-3">
+            <label for="tituloPelicula" class="form-label">Película:</label>
+            <!-- form-select = estilo Bootstrap para <select> -->
+            <select class="form-select" id="tituloPelicula" name="tituloPelicula">
               <option value="">-- Elige una película --</option>
               <option value="dune2">Dune: Parte 2 — $22.000</option>
               <option value="godzilla">Godzilla vs. Kong — $22.000</option>
@@ -64,32 +70,35 @@
               <option value="oppenheimer">Oppenheimer — $19.000</option>
               <option value="lotr">El Señor de los Anillos — $19.000</option>
             </select>
-          </p>
-          <p>
-            <label for="cantidadTickets">Cantidad de Tickets:</label>
+          </div>
+          <div class="mb-3">
+            <label for="cantidadTickets" class="form-label">Cantidad de Tickets:</label>
             <input
               type="number"
+              class="form-control"
               id="cantidadTickets"
               name="cantidadTickets"
               min="1"
               max="10"
               placeholder="1"
             />
-          </p>
-          <p>
-            <label for="edadComprador">Edad del Comprador:</label>
+          </div>
+          <div class="mb-3">
+            <label for="edadComprador" class="form-label">Edad del Comprador:</label>
             <input
               type="number"
+              class="form-control"
               id="edadComprador"
               name="edadComprador"
               min="1"
               max="120"
               placeholder="Ej: 22"
             />
-          </p>
-          <p>
-            <button type="submit">Procesar Compra</button>
-          </p>
+          </div>
+          <div class="d-grid">
+            <!-- d-grid = hace que el botón ocupe todo el ancho -->
+            <button type="submit" class="btn btn-danger rounded-pill fw-bold">Procesar Compra</button>
+          </div>
         </form>
       </section>
     </main>

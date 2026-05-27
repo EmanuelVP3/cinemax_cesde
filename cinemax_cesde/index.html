@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cartelera - CineMax CESDE</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🎬 CineMax CESDE</h1>
+      <p>Tu cine favorito - Vive la experiencia en grande</p>
+      <a href="login.html#login">Iniciar sesión</a> &nbsp;|&nbsp;
+      <a href="login.html#registro">Registrarse</a>
+    </header>
+    <nav>
+      <a href="index.html" class="active">Cartelera</a>
+      <a href="compra.html">Comprar Tickets</a>
+      <a href="multimedia.html">Multimedia</a>
+      <a href="contacto.html">Contáctanos</a>
+    </nav>
+    <main>
+      <section id="peliculas">
+        <h2>🎭 Cartelera - Películas Disponibles</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Título</th>
+              <th>Género</th>
+              <th>Horario</th>
+              <th>Clasificación</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="multimedia.html#trailer-dune">
+                  <img src="./media/dune_part_two.jpg" alt="Dune: Parte 2" width="100" />
+                </a>
+                <br />
+                <strong>Dune: Parte 2</strong>
+              </td>
+              <td>Ciencia Ficción</td>
+              <td>3:00 PM - 6:30 PM</td>
+              <td>PG-13</td>
+              <td>$22.000</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="multimedia.html#trailer-godzilla">
+                  <img src="./media/godzilla-vs-kong.jpg" alt="Godzilla vs. Kong" width="100" />
+                </a>
+                <br />
+                <strong>Godzilla vs. Kong</strong>
+              </td>
+              <td>Acción / Monstruos</td>
+              <td>1:00 PM - 4:00 PM - 8:00 PM</td>
+              <td>PG-13</td>
+              <td>$22.000</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="multimedia.html#trailer-insideout">
+                  <img src="./media/Inside_Out_2_poster.jpg" alt="Inside Out 2" width="100" />
+                </a>
+                <br />
+                <strong>Inside Out 2</strong>
+              </td>
+              <td>Animación / Comedia</td>
+              <td>11:00 AM - 2:30 PM - 5:00 PM</td>
+              <td>G (Todo público)</td>
+              <td>$15.000</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="multimedia.html#trailer-oppenheimer">
+                  <img src="./media/oppenheimer_ver3.jpg" alt="Oppenheimer" width="100" />
+                </a>
+                <br />
+                <strong>Oppenheimer</strong>
+              </td>
+              <td>Drama / Historia</td>
+              <td>4:00 PM - 8:00 PM</td>
+              <td>R (Mayores de 17)</td>
+              <td>$19.000</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="multimedia.html#trailer-lotr">
+                  <img src="./media/The-Lord-Of-The-Rings.jpg" alt="El Señor de los Anillos" width="100" />
+                </a>
+                <br />
+                <strong>El Señor de los Anillos</strong>
+              </td>
+              <td>Fantasía / Aventura</td>
+              <td>2:00 PM - 7:00 PM</td>
+              <td>PG-13</td>
+              <td>$19.000</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="compra">
+        <h2>🎟️ Comprar Ticket</h2>
+        <form action="compra.html">
+          <p>
+            <label for="nombreCliente">Nombre del cliente:</label>
+            <input
+              type="text"
+              id="nombreCliente"
+              name="nombreCliente"
+              placeholder="Ej: Juan Pérez"
+            />
+          </p>
+          <p>
+            <label for="pelicula">Película:</label>
+            <select id="pelicula" name="pelicula">
+              <option value="">-- Elige una película --</option>
+              <option value="dune2">Dune: Parte 2 — $18.000</option>
+              <option value="godzilla">Godzilla vs. Kong — $16.000</option>
+              <option value="insideout2">Inside Out 2 — $15.000</option>
+              <option value="oppenheimer">Oppenheimer — $20.000</option>
+              <option value="lotr">El Señor de los Anillos — $17.000</option>
+            </select>
+          </p>
+          <p>
+            <label for="cantidad">Cantidad de tickets:</label>
+            <input
+              type="number"
+              id="cantidad"
+              name="cantidad"
+              min="1"
+              max="10"
+              placeholder="1"
+            />
+          </p>
+          <p>
+            <label for="edadComprador">Edad del comprador:</label>
+            <input
+              type="number"
+              id="edadComprador"
+              name="edadComprador"
+              min="1"
+              max="120"
+              placeholder="Ej: 22"
+            />
+          </p>
+          <p>
+            <button type="submit">Comprar</button>
+          </p>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>
+        &copy; 2026 CineMax CESDE - Introducción a la Programación &nbsp;|&nbsp;
+        Todos los derechos reservados
+      </p>
+    </footer>
+  </body>
+</html>

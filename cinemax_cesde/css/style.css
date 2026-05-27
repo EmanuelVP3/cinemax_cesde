@@ -76,6 +76,48 @@ main {
 h2 {
   text-align: center;
 }
+
+/* ========== PSEUDOELEMENTOS ========== */
+
+/* 1. ::before → Línea roja decorativa ANTES de cada título h2 */
+h2::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #e74c3c;
+  margin: 0 auto 10px auto;
+  border-radius: 2px;
+}
+
+/* 2. ::after → Efecto de brillo que se desliza sobre los botones al pasar el mouse */
+button::after,
+.btn-danger::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+button,
+.btn-danger {
+  position: relative;
+  overflow: hidden;
+}
+button:hover::after,
+.btn-danger:hover::after {
+  left: 100%;
+}
+
+/* 3. ::first-letter → Primera letra grande y roja en la dirección de contacto */
+address::first-letter {
+  font-size: 1.5em;
+  color: #e74c3c;
+  font-weight: bold;
+}
 section {
   margin-bottom: 30px;
 }
@@ -190,52 +232,123 @@ iframe {
 .cerrar-cine:hover {
   background-color: #c0392b;
 }
+/* ========== DISEÑO RESPONSIVO (@media queries) ========== */
+
+/* Tablets y pantallas medianas */
 @media (max-width: 768px) {
   main {
     flex-direction: column;
+    margin: 15px 10px;
+    padding: 16px;
+  }
+  header h1 {
+    font-size: 1.8rem;
+  }
+  header p {
+    font-size: 0.9rem;
+  }
+  .escenario-cine {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .crispetas {
+    font-size: 50px;
+  }
+}
+
+/* Celulares pequeños */
+@media (max-width: 480px) {
+  header {
+    padding: 12px 0;
+  }
+  header h1 {
+    font-size: 1.4rem;
+  }
+  header p {
+    font-size: 0.8rem;
+  }
+  .btn-ingresar, .btn-registro {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+  nav .nav-link {
+    font-size: 0.8rem;
+    padding: 4px 10px !important;
+  }
+  main {
+    margin: 10px 5px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  iframe {
+    height: 200px;
+  }
+}
+
+/* Pantallas grandes (escritorio) */
+@media (min-width: 1200px) {
+  main {
+    max-width: 1300px;
+    padding: 30px;
   }
 }
 /* Botones de inicio de sesión personalizados */
 .btn-ingresar {
   color: white;
   text-decoration: none;
-  border: 1px solid white;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 6px 16px;
-  border-radius: 50px; /* Hace el botón ovalado */
+  border-radius: 50px;
   transition: all 0.3s ease;
 }
 .btn-ingresar:hover {
   background-color: #e74c3c;
   border-color: #e74c3c;
   color: white;
+  /* GLOW NEÓN al pasar el mouse */
+  box-shadow: 0 0 8px rgba(231, 76, 60, 0.5),
+              0 0 20px rgba(231, 76, 60, 0.25);
 }
 
 .btn-registro {
-  background-color: #e74c3c;
+  background: rgba(231, 76, 60, 0.3); /* Rojo suave transparente (NO sólido) */
   color: white;
   text-decoration: none;
   padding: 6px 16px;
   border-radius: 50px;
-  border: 1px solid #e74c3c;
+  border: 1px solid rgba(231, 76, 60, 0.5);
   font-weight: bold;
   transition: all 0.3s ease;
 }
 .btn-registro:hover {
-  background-color: #c0392b;
-  border-color: #c0392b;
+  background-color: #e74c3c; /* Se ilumina SOLO al pasar el mouse */
+  border-color: #e74c3c;
   color: white;
+  /* GLOW NEÓN al pasar el mouse */
+  box-shadow: 0 0 8px rgba(231, 76, 60, 0.6),
+              0 0 20px rgba(231, 76, 60, 0.3);
 }
 
-/* Forzar que las píldoras activas de Bootstrap usen tu color rojo */
+/* Forzar que las píldoras activas de Bootstrap usen tu color rojo + GLOW NEÓN */
 .nav-pills .nav-link.active {
   background-color: #e74c3c !important;
   color: white !important;
+  /* EFECTO GLOW: resplandor rojo detrás de la pestaña activa */
+  box-shadow: 0 0 8px rgba(231, 76, 60, 0.6),
+              0 0 20px rgba(231, 76, 60, 0.3);
 }
 
-/* Efecto hover elegante para las otras pestañas */
+/* Efecto hover elegante con GLOW para las otras pestañas */
 .nav-pills .nav-link:not(.active):hover {
-  background-color: rgba(231, 76, 60, 0.2); /* Rojo muy transparente */
+  background-color: rgba(231, 76, 60, 0.2);
   color: white !important;
+  /* GLOW suave al pasar el mouse */
+  box-shadow: 0 0 10px rgba(231, 76, 60, 0.3);
+  transition: all 0.3s ease;
 }
 
 /* Tarjetas de cristal esmerilado translúcidas (Glassmorphism para películas) */

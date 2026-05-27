@@ -15,21 +15,18 @@
   <body>
     <!-- Cabecera con Bootstrap -->
     <header class="text-white text-center py-4">
-      <h1 class="display-4 fw-bold logo-cinemax">
-        <span style="--i:0">🎬</span>&nbsp;<span style="--i:1">C</span><span style="--i:2">i</span><span style="--i:3">n</span><span style="--i:4">e</span><span style="--i:5">M</span><span style="--i:6">a</span><span style="--i:7">x</span>&nbsp;<span style="--i:8">C</span><span style="--i:9">E</span><span style="--i:10">S</span><span style="--i:11">D</span><span style="--i:12">E</span>
-      </h1>
-      <p class="lead mb-3">Tu cine favorito - Vive la experiencia en grande</p>
-      <div class="d-flex gap-2 justify-content-center">
-            <a href="login.html#login" class="btn-auth">Iniciar sesión</a>
-            <a href="login.html#registro" class="btn-auth">Registrarse</a>
-          </div>
+
+      <div class="d-flex gap-2 justify-content-center d-md-none">
+        <a href="login.html#login" class="btn-auth">Iniciar sesión</a>
+        <a href="login.html#registro" class="btn-auth">Registrarse</a>
+      </div>
     </header>
 
     <!-- Nueva Barra de Navegación Transparente -->
     <nav class="navbar navbar-expand-lg sticky-top shadow-lg" style="background: rgba(10, 10, 18, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(231, 76, 60, 0.2); z-index: 1050;">
       <div class="container">
-        <!-- Título pequeño que solo aparece en celulares -->
-        <a class="navbar-brand text-white fw-bold d-lg-none" href="index.html">🎬 CineMax</a>
+        <!-- Título en Navbar (Siempre visible) -->
+        <a class="navbar-brand text-white fw-bold" href="index.html">🎬 CineMax CESDE</a>
         
         <!-- Botón de hamburguesa para móviles -->
         <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,97 +35,87 @@
         
         <!-- Contenido de la barra (Enlaces) -->
         <div class="collapse navbar-collapse justify-content-center" id="menuNavegacion">
-          <ul class="navbar-nav gap-2 text-center mt-3 mt-lg-0 p-2 p-lg-0 rounded-4" style="background: rgba(0,0,0,0.2);">
+          <ul class="navbar-nav mx-auto gap-3">
             <li class="nav-item">
-              <a class="nav-link text-white rounded-pill px-4 hover-nav" href="index.html">Cartelera</a>
+              <a class="nav-link btn-auth text-white" href="index.html">Cartelera</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active rounded-pill px-4 fw-bold nav-neon-active" href="compra.html">Comprar Tickets</a>
+              <a class="nav-link btn-auth active" href="compra.html">Comprar Tickets</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white rounded-pill px-4 hover-nav" href="multimedia.html">Multimedia</a>
+              <a class="nav-link btn-auth text-white" href="multimedia.html">Multimedia</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white rounded-pill px-4 hover-nav" href="contacto.html">Contáctanos</a>
+              <a class="nav-link btn-auth text-white" href="contacto.html">Contáctanos</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <main>
-      <section id="compra">
-        <h2>🎟️ Formulario de Compra de Tickets</h2>
-        <!-- Formulario con clases de Bootstrap -->
-        <form action="">
-          <!-- mb-3 = margin-bottom 3 (espaciado entre campos) -->
-          <div class="mb-3">
-            <!-- form-label = estilo Bootstrap para etiquetas -->
-            <label for="nombreCliente" class="form-label">Nombre del Cliente:</label>
-            <!-- form-control = estilo Bootstrap para inputs (bordes redondeados, tamaño uniforme) -->
-            <input
-              type="text"
-              class="form-control"
-              id="nombreCliente"
-              name="nombreCliente"
-              placeholder="Ej: Juan Pérez"
-            />
+      <section id="compra" class="container mt-5 mb-5 w-100">
+        <div class="row g-4 align-items-center">
+          
+          <!-- Columna Izquierda: Logo CineMax -->
+          <div class="col-md-6 d-none d-md-block text-center">
+            <h1 class="display-2 fw-bold logo-cinemax mb-4">
+              <span style="--i:0">🎬</span><br>
+              <span style="--i:1">C</span><span style="--i:2">i</span><span style="--i:3">n</span><span style="--i:4">e</span><span style="--i:5">M</span><span style="--i:6">a</span><span style="--i:7">x</span><br>
+              <span class="fs-2" style="--i:8">C</span><span class="fs-2" style="--i:9">E</span><span class="fs-2" style="--i:10">S</span><span class="fs-2" style="--i:11">D</span><span class="fs-2" style="--i:12">E</span>
+            </h1>
+            <p class="lead text-white-50 mt-4">Tu cine favorito - Vive la experiencia en grande</p>
           </div>
-          <div class="mb-3">
-            <label for="tituloPelicula" class="form-label">Película:</label>
-            <!-- form-select = estilo Bootstrap para <select> -->
-            <select class="form-select" id="tituloPelicula" name="tituloPelicula">
-              <option value="">-- Elige una película --</option>
-              <option value="dune2">Dune: Parte 2 — $22.000</option>
-              <option value="godzilla">Godzilla vs. Kong — $22.000</option>
-              <option value="insideout2">Inside Out 2 — $15.000</option>
-              <option value="oppenheimer">Oppenheimer — $19.000</option>
-              <option value="lotr">El Señor de los Anillos — $19.000</option>
-              <option value="deadpool">Deadpool & Wolverine — $20.000</option>
-              <option value="spiderman">Spider-Man: No Way Home — $21.000</option>
-              <option value="batman">The Batman — $19.000</option>
-              <option value="avatar">Avatar: El Camino del Agua — $23.000</option>
-              <option value="avengers">Avengers: Endgame — $25.000</option>
-              <option value="joker">Joker — $18.000</option>
-              <option value="interstellar">Interstellar — $18.000</option>
-              <option value="matrix">The Matrix — $17.000</option>
-              <option value="inception">Inception — $21.000</option>
-              <option value="gladiator">Gladiator — $20.000</option>
-              <option value="croods">Los Croods — $15.000</option>
-              <option value="killbill">Kill Bill — $19.000</option>
-              <option value="lionking">El Rey León — $14.000</option>
-              <option value="titanic">Titanic — $18.000</option>
-              <option value="jurassic">Jurassic Park — $16.000</option>
-            </select>
+
+          <!-- Columna Derecha: Formulario -->
+          <div class="col-md-6">
+            <div class="bg-glass-card p-4 rounded-4">
+              <h3 class="text-center mb-4 text-white">🎟️ Compra de Tickets</h3>
+              <form action="">
+                <div class="mb-3">
+                  <label for="nombreCliente" class="form-label text-white">Nombre del Cliente:</label>
+                  <input type="text" class="form-control" id="nombreCliente" name="nombreCliente" placeholder="Ej: Juan Pérez" />
+                </div>
+                <div class="mb-3">
+                  <label for="tituloPelicula" class="form-label text-white">Película:</label>
+                  <select class="form-select" id="tituloPelicula" name="tituloPelicula">
+                    <option value="">-- Elige una película --</option>
+                    <option value="dune2">Dune: Parte 2 — $22.000</option>
+                    <option value="godzilla">Godzilla vs. Kong — $22.000</option>
+                    <option value="insideout2">Inside Out 2 — $15.000</option>
+                    <option value="oppenheimer">Oppenheimer — $19.000</option>
+                    <option value="lotr">El Señor de los Anillos — $19.000</option>
+                    <option value="deadpool">Deadpool & Wolverine — $20.000</option>
+                    <option value="spiderman">Spider-Man: No Way Home — $21.000</option>
+                    <option value="batman">The Batman — $19.000</option>
+                    <option value="avatar">Avatar: El Camino del Agua — $23.000</option>
+                    <option value="avengers">Avengers: Endgame — $25.000</option>
+                    <option value="joker">Joker — $18.000</option>
+                    <option value="interstellar">Interstellar — $18.000</option>
+                    <option value="matrix">The Matrix — $17.000</option>
+                    <option value="inception">Inception — $21.000</option>
+                    <option value="gladiator">Gladiator — $20.000</option>
+                    <option value="croods">Los Croods — $15.000</option>
+                    <option value="killbill">Kill Bill — $19.000</option>
+                    <option value="lionking">El Rey León — $14.000</option>
+                    <option value="titanic">Titanic — $18.000</option>
+                    <option value="jurassic">Jurassic Park — $16.000</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="cantidadTickets" class="form-label text-white">Cantidad de Tickets:</label>
+                  <input type="number" class="form-control" id="cantidadTickets" name="cantidadTickets" min="1" max="10" placeholder="1" />
+                </div>
+                <div class="mb-4">
+                  <label for="edadComprador" class="form-label text-white">Edad del Comprador:</label>
+                  <input type="number" class="form-control" id="edadComprador" name="edadComprador" min="1" max="120" placeholder="Ej: 22" />
+                </div>
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-danger rounded-pill fw-bold py-2">Procesar Compra</button>
+                </div>
+              </form>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="cantidadTickets" class="form-label">Cantidad de Tickets:</label>
-            <input
-              type="number"
-              class="form-control"
-              id="cantidadTickets"
-              name="cantidadTickets"
-              min="1"
-              max="10"
-              placeholder="1"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="edadComprador" class="form-label">Edad del Comprador:</label>
-            <input
-              type="number"
-              class="form-control"
-              id="edadComprador"
-              name="edadComprador"
-              min="1"
-              max="120"
-              placeholder="Ej: 22"
-            />
-          </div>
-          <div class="d-grid">
-            <!-- d-grid = hace que el botón ocupe todo el ancho -->
-            <button type="submit" class="btn btn-danger rounded-pill fw-bold">Procesar Compra</button>
-          </div>
-        </form>
+        </div>
       </section>
     </main>
     <footer>

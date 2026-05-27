@@ -15,11 +15,7 @@
   <body>
     <!-- Tu Cabecera Original con esteroides de Bootstrap -->
     <header class="text-white text-center py-4">
-      <h1 class="display-4 fw-bold logo-cinemax">
-        <span style="--i:0">🎬</span>&nbsp;<span style="--i:1">C</span><span style="--i:2">i</span><span style="--i:3">n</span><span style="--i:4">e</span><span style="--i:5">M</span><span style="--i:6">a</span><span style="--i:7">x</span>&nbsp;<span style="--i:8">C</span><span style="--i:9">E</span><span style="--i:10">S</span><span style="--i:11">D</span><span style="--i:12">E</span>
-      </h1>
-      <p class="lead mb-3">Tu cine favorito - Vive la experiencia en grande</p>
-      <div class="d-flex gap-2 justify-content-center">
+      <div class="d-flex gap-2 justify-content-center d-md-none">
             <a href="login.html#login" class="btn-auth">Iniciar sesión</a>
             <a href="login.html#registro" class="btn-auth">Registrarse</a>
           </div>
@@ -28,8 +24,8 @@
     <!-- Nueva Barra de Navegación Transparente -->
     <nav class="navbar navbar-expand-lg sticky-top shadow-lg" style="background: rgba(10, 10, 18, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(231, 76, 60, 0.2); z-index: 1050;">
       <div class="container">
-        <!-- Título pequeño que solo aparece en celulares -->
-        <a class="navbar-brand text-white fw-bold d-lg-none" href="index.html">🎬 CineMax</a>
+        <!-- Título en Navbar (Siempre visible) -->
+        <a class="navbar-brand text-white fw-bold" href="index.html">🎬 CineMax CESDE</a>
         
         <!-- Botón de hamburguesa para móviles -->
         <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,18 +34,18 @@
         
         <!-- Contenido de la barra (Enlaces) -->
         <div class="collapse navbar-collapse justify-content-center" id="menuNavegacion">
-          <ul class="navbar-nav gap-2 text-center mt-3 mt-lg-0 p-2 p-lg-0 rounded-4" style="background: rgba(0,0,0,0.2);">
+          <ul class="navbar-nav mx-auto gap-3">
             <li class="nav-item">
-              <a class="nav-link text-white rounded-pill px-4 hover-nav" href="index.html">Cartelera</a>
+              <a class="nav-link btn-auth text-white" href="index.html">Cartelera</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white rounded-pill px-4 hover-nav" href="compra.html">Comprar Tickets</a>
+              <a class="nav-link btn-auth text-white" href="compra.html">Comprar Tickets</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white rounded-pill px-4 hover-nav" href="multimedia.html">Multimedia</a>
+              <a class="nav-link btn-auth text-white" href="multimedia.html">Multimedia</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white rounded-pill px-4 hover-nav" href="contacto.html">Contáctanos</a>
+              <a class="nav-link btn-auth text-white" href="contacto.html">Contáctanos</a>
             </li>
           </ul>
         </div>
@@ -60,34 +56,14 @@
       <section id="auth-section" class="w-100">
         <div class="row g-4 align-items-center">
           
-          <!-- Columna Izquierda: Animación / Carrusel Espacial (Estilo Bootstrap) -->
-          <!-- d-none d-md-block oculta esto en celulares para ahorrar espacio -->
-          <div class="col-md-6 d-none d-md-block">
-            <div id="carruselEspacial" class="carousel slide carousel-fade shadow-lg" data-bs-ride="carousel" style="border-radius: 16px; overflow: hidden; border: 1px solid rgba(231, 76, 60, 0.3);">
-              <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="3000">
-                  <img src="https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=800" class="d-block w-100" alt="Espacio 1" style="height: 500px; object-fit: cover;">
-                  <div class="carousel-caption d-none d-md-block" style="background: rgba(0,0,0,0.5); border-radius: 10px; backdrop-filter: blur(4px);">
-                    <h5>🌌 Un Universo de Películas</h5>
-                    <p>Tu viaje estelar comienza aquí.</p>
-                  </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                  <img src="https://images.unsplash.com/photo-1440688807730-73e4e2169fb8?w=800" class="d-block w-100" alt="Espacio 2" style="height: 500px; object-fit: cover;">
-                  <div class="carousel-caption d-none d-md-block" style="background: rgba(0,0,0,0.5); border-radius: 10px; backdrop-filter: blur(4px);">
-                    <h5>✨ Experiencia Premium</h5>
-                    <p>La mejor calidad de imagen y sonido.</p>
-                  </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                  <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800" class="d-block w-100" alt="Espacio 3" style="height: 500px; object-fit: cover;">
-                  <div class="carousel-caption d-none d-md-block" style="background: rgba(0,0,0,0.5); border-radius: 10px; backdrop-filter: blur(4px);">
-                    <h5>🚀 Estrenos Exclusivos</h5>
-                    <p>Sé el primero en ver las novedades.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <!-- Columna Izquierda: Logo CineMax -->
+          <div class="col-md-6 d-none d-md-block text-center">
+            <h1 class="display-2 fw-bold logo-cinemax mb-4">
+              <span style="--i:0">🎬</span><br>
+              <span style="--i:1">C</span><span style="--i:2">i</span><span style="--i:3">n</span><span style="--i:4">e</span><span style="--i:5">M</span><span style="--i:6">a</span><span style="--i:7">x</span><br>
+              <span class="fs-2" style="--i:8">C</span><span class="fs-2" style="--i:9">E</span><span class="fs-2" style="--i:10">S</span><span class="fs-2" style="--i:11">D</span><span class="fs-2" style="--i:12">E</span>
+            </h1>
+            <p class="lead text-white-50 mt-4">Tu cine favorito - Vive la experiencia en grande</p>
           </div>
 
           <!-- Columna Derecha: Formularios con Pestañas (Tabs) de Bootstrap -->

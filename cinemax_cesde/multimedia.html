@@ -14,22 +14,19 @@
   </head>
   <body>
     <!-- Tu Cabecera Original con esteroides de Bootstrap -->
-    <header class="text-white text-center py-4 d-none">
-      <h1 class="display-4 fw-bold logo-cinemax">
-        <span style="--i:0">🎬</span>&nbsp;<span style="--i:1">C</span><span style="--i:2">i</span><span style="--i:3">n</span><span style="--i:4">e</span><span style="--i:5">M</span><span style="--i:6">a</span><span style="--i:7">x</span>&nbsp;<span style="--i:8">C</span><span style="--i:9">E</span><span style="--i:10">S</span><span style="--i:11">D</span><span style="--i:12">E</span>
-      </h1>
-      <p class="lead mb-3">Tu cine favorito - Vive la experiencia en grande</p>
-      <div class="d-flex gap-2 justify-content-center">
-            <a href="login.html#login" class="btn-auth">Iniciar sesión</a>
-            <a href="login.html#registro" class="btn-auth">Registrarse</a>
-          </div>
+    <header class="text-white text-center py-4">
+
+      <div class="d-flex gap-2 justify-content-center d-md-none">
+        <a href="login.html#login" class="btn-auth">Iniciar sesión</a>
+        <a href="login.html#registro" class="btn-auth">Registrarse</a>
+      </div>
     </header>
 
     <!-- Nueva Barra de Navegación Transparente -->
     <nav class="navbar navbar-expand-lg sticky-top shadow-lg" style="background: rgba(10, 10, 18, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(231, 76, 60, 0.2); z-index: 1050;">
       <div class="container">
-        <!-- Título pequeño que solo aparece en celulares -->
-        <a class="navbar-brand text-white fw-bold d-lg-none" href="index.html">🎬 CineMax</a>
+        <!-- Título en Navbar (Siempre visible) -->
+        <a class="navbar-brand text-white fw-bold" href="index.html">🎬 CineMax CESDE</a>
         
         <!-- Botón de hamburguesa para móviles -->
         <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,16 +37,16 @@
         <div class="collapse navbar-collapse justify-content-center" id="menuNavegacion">
           <ul class="navbar-nav mx-auto gap-3">
             <li class="nav-item">
-              <a class="nav-link text-white" href="index.html">Cartelera</a>
+              <a class="nav-link btn-auth text-white" href="index.html">Cartelera</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="compra.html">Comprar Tickets</a>
+              <a class="nav-link btn-auth text-white" href="compra.html">Comprar Tickets</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active rounded-pill px-4 fw-bold nav-neon-active" href="multimedia.html">Multimedia</a>
+              <a class="nav-link btn-auth active" href="multimedia.html">Multimedia</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="contacto.html">Contáctanos</a>
+              <a class="nav-link btn-auth text-white" href="contacto.html">Contáctanos</a>
             </li>
           </ul>
         </div>
@@ -68,7 +65,7 @@
           <div class="col">
             <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
               <a href="#trailer-dune" class="overflow-hidden d-block">
-                <img src="./media/dune_part_two.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Dune: Parte 2">
+                <img src="./media/dune_part_two.jpg" class="card-img-top" style="aspect-ratio: 2/3; object-fit: cover;" alt="Dune: Parte 2">
               </a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-danger fw-bold fs-5">Dune: Parte 2</h5>
@@ -88,7 +85,7 @@
           <div class="col">
             <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
               <a href="#trailer-godzilla" class="overflow-hidden d-block">
-                <img src="./media/godzilla-vs-kong.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Godzilla vs. Kong">
+                <img src="./media/godzilla-vs-kong.jpg" class="card-img-top" style="aspect-ratio: 2/3; object-fit: cover;" alt="Godzilla vs. Kong">
               </a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-danger fw-bold fs-5">Godzilla vs. Kong</h5>
@@ -108,7 +105,7 @@
           <div class="col">
             <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
               <a href="#trailer-insideout" class="overflow-hidden d-block">
-                <img src="./media/Inside_Out_2_poster.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Inside Out 2">
+                <img src="./media/Inside_Out_2_poster.jpg" class="card-img-top" style="aspect-ratio: 2/3; object-fit: cover;" alt="Inside Out 2">
               </a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-danger fw-bold fs-5">Inside Out 2</h5>
@@ -128,7 +125,7 @@
           <div class="col">
             <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
               <a href="#trailer-oppenheimer" class="overflow-hidden d-block">
-                <img src="./media/oppenheimer_ver3.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Oppenheimer">
+                <img src="./media/oppenheimer_ver3.jpg" class="card-img-top" style="aspect-ratio: 2/3; object-fit: cover;" alt="Oppenheimer">
               </a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-danger fw-bold fs-5">Oppenheimer</h5>
@@ -148,7 +145,7 @@
           <div class="col">
             <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
               <a href="#trailer-lotr" class="overflow-hidden d-block">
-                <img src="./media/The-Lord-Of-The-Rings.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="El Señor de los Anillos">
+                <img src="./media/The-Lord-Of-The-Rings.jpg" class="card-img-top" style="aspect-ratio: 2/3; object-fit: cover;" alt="El Señor de los Anillos">
               </a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-danger fw-bold fs-5">El Señor de los Anillos</h5>
@@ -168,7 +165,7 @@
           <div class="col">
             <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
               <a href="#trailer-deadpool" class="overflow-hidden d-block">
-                <img src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Deadpool & Wolverine">
+                <img src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" class="card-img-top" style="aspect-ratio: 2/3; object-fit: cover;" alt="Deadpool & Wolverine">
               </a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-danger fw-bold fs-5">Deadpool & Wolverine</h5>
@@ -188,7 +185,7 @@
           <div class="col">
             <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
               <a href="#trailer-spiderman" class="overflow-hidden d-block">
-                <img src="https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Spider-Man: No Way Home">
+                <img src="https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg" class="card-img-top" style="aspect-ratio: 2/3; object-fit: cover;" alt="Spider-Man: No Way Home">
               </a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-danger fw-bold fs-5">Spider-Man: No Way Home</h5>
@@ -208,7 +205,7 @@
           <div class="col">
             <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
               <a href="#trailer-batman" class="overflow-hidden d-block">
-                <img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="The Batman">
+                <img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg" class="card-img-top" style="aspect-ratio: 2/3; object-fit: cover;" alt="The Batman">
               </a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-danger fw-bold fs-5">The Batman</h5>
@@ -228,7 +225,7 @@
           <div class="col">
             <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
               <a href="#trailer-avatar" class="overflow-hidden d-block">
-                <img src="https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Avatar 2">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg" class="card-img-top" style="aspect-ratio: 2/3; object-fit: cover;" alt="Avatar 2">
               </a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-danger fw-bold fs-5">Avatar 2</h5>
@@ -248,7 +245,7 @@
           <div class="col">
             <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
               <a href="#trailer-avengers" class="overflow-hidden d-block">
-                <img src="https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Avengers: Endgame">
+                <img src="https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg" class="card-img-top" style="aspect-ratio: 2/3; object-fit: cover;" alt="Avengers: Endgame">
               </a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-danger fw-bold fs-5">Avengers: Endgame</h5>
@@ -268,7 +265,7 @@
           <div class="col">
             <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
               <a href="#trailer-joker" class="overflow-hidden d-block">
-                <img src="https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Joker">
+                <img src="https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg" class="card-img-top" style="aspect-ratio: 2/3; object-fit: cover;" alt="Joker">
               </a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-danger fw-bold fs-5">Joker</h5>
@@ -288,7 +285,7 @@
           <div class="col">
             <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
               <a href="#trailer-interstellar" class="overflow-hidden d-block">
-                <img src="https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Interstellar">
+                <img src="https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg" class="card-img-top" style="aspect-ratio: 2/3; object-fit: cover;" alt="Interstellar">
               </a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-danger fw-bold fs-5">Interstellar</h5>
@@ -308,7 +305,7 @@
           <div class="col">
             <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
               <a href="#trailer-matrix" class="overflow-hidden d-block">
-                <img src="https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="The Matrix">
+                <img src="https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg" class="card-img-top" style="aspect-ratio: 2/3; object-fit: cover;" alt="The Matrix">
               </a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-danger fw-bold fs-5">The Matrix</h5>
@@ -328,7 +325,7 @@
           <div class="col">
             <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
               <a href="#trailer-inception" class="overflow-hidden d-block">
-                <img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Inception">
+                <img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg" class="card-img-top" style="aspect-ratio: 2/3; object-fit: cover;" alt="Inception">
               </a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-danger fw-bold fs-5">Inception</h5>
@@ -348,7 +345,7 @@
           <div class="col">
             <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
               <a href="#trailer-gladiator" class="overflow-hidden d-block">
-                <img src="https://upload.wikimedia.org/wikipedia/en/f/fb/Gladiator_%282000_film_poster%29.png" class="card-img-top" style="height:200px;object-fit:cover;" alt="Gladiator">
+                <img src="https://upload.wikimedia.org/wikipedia/en/f/fb/Gladiator_%282000_film_poster%29.png" class="card-img-top" style="aspect-ratio: 2/3; object-fit: cover;" alt="Gladiator">
               </a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-danger fw-bold fs-5">Gladiator</h5>
@@ -368,7 +365,7 @@
           <div class="col">
             <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
               <a href="#trailer-croods" class="overflow-hidden d-block">
-                <img src="https://upload.wikimedia.org/wikipedia/en/9/90/The_Croods_poster.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Los Croods">
+                <img src="https://upload.wikimedia.org/wikipedia/en/9/90/The_Croods_poster.jpg" class="card-img-top" style="aspect-ratio: 2/3; object-fit: cover;" alt="Los Croods">
               </a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-danger fw-bold fs-5">Los Croods</h5>
@@ -388,7 +385,7 @@
           <div class="col">
             <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
               <a href="#trailer-killbill" class="overflow-hidden d-block">
-                <img src="https://upload.wikimedia.org/wikipedia/en/2/2c/Kill_Bill_Volume_1.png" class="card-img-top" style="height:200px;object-fit:cover;" alt="Kill Bill">
+                <img src="https://upload.wikimedia.org/wikipedia/en/2/2c/Kill_Bill_Volume_1.png" class="card-img-top" style="aspect-ratio: 2/3; object-fit: cover;" alt="Kill Bill">
               </a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-danger fw-bold fs-5">Kill Bill</h5>
@@ -439,6 +436,7 @@
         </form>
       </section>
     
+    </main>
 <!-- Modos Cine -->
       <section id="trailer-dune" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Dune: Parte 2</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/Way9Dexny3w" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
       <section id="trailer-godzilla" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Godzilla vs. Kong</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/odM92ap8_c0" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
@@ -460,7 +458,6 @@
       <section id="trailer-lionking" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>El Rey León</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/lFzVJEksoDY" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
       <section id="trailer-titanic" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Titanic</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/CHekzSiZelA" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
       <section id="trailer-jurassic" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Jurassic Park</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/lc0UehYemQA" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
-    </main>
     <footer>
       <p>
         &copy; 2026 CineMax CESDE - Introducción a la Programación &nbsp;|&nbsp;

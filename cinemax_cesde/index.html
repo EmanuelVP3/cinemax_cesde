@@ -15,7 +15,9 @@
   <body>
     <!-- Tu Cabecera Original con esteroides de Bootstrap -->
     <header class="text-white text-center py-4">
-      <h1 class="display-4 fw-bold">🎬 CineMax CESDE</h1>
+      <h1 class="display-4 fw-bold logo-cinemax">
+        <span style="--i:0">🎬</span>&nbsp;<span style="--i:1">C</span><span style="--i:2">i</span><span style="--i:3">n</span><span style="--i:4">e</span><span style="--i:5">M</span><span style="--i:6">a</span><span style="--i:7">x</span>&nbsp;<span style="--i:8">C</span><span style="--i:9">E</span><span style="--i:10">S</span><span style="--i:11">D</span><span style="--i:12">E</span>
+      </h1>
       <p class="lead mb-3">Tu cine favorito - Vive la experiencia en grande</p>
       <div class="d-flex justify-content-center gap-2">
         <a href="login.html#login" class="btn-ingresar">Iniciar sesión</a>
@@ -23,35 +25,40 @@
       </div>
     </header>
 
-    <!-- Tu Menú de Navegación con estructura de Píldoras de Bootstrap -->
-    <nav class="py-3 shadow-sm">
-      <div class="container d-flex justify-content-center">
-        <ul class="nav nav-pills gap-2 flex-wrap justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link active rounded-pill px-4" href="index.html"
-              >Cartelera</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white rounded-pill px-4" href="compra.html"
-              >Comprar Tickets</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-white rounded-pill px-4"
-              href="multimedia.html"
-              >Multimedia</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-white rounded-pill px-4"
-              href="contacto.html"
-              >Contáctanos</a
-            >
-          </li>
-        </ul>
+    <!-- Nueva Barra de Navegación Transparente -->
+    <nav class="navbar navbar-expand-lg sticky-top shadow-lg" style="background: rgba(10, 10, 18, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(231, 76, 60, 0.2); z-index: 1050;">
+      <div class="container">
+        <!-- Título pequeño que solo aparece en celulares -->
+        <a class="navbar-brand text-white fw-bold d-lg-none" href="index.html">🎬 CineMax</a>
+        
+        <!-- Botón de hamburguesa para móviles -->
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="filter: invert(1) sepia(1) saturate(5) hue-rotate(300deg);"></span>
+        </button>
+        
+        <!-- Contenido de la barra (Enlaces y Buscador) -->
+        <div class="collapse navbar-collapse justify-content-center" id="menuNavegacion">
+          <ul class="navbar-nav gap-2 text-center mt-3 mt-lg-0 p-2 p-lg-0 rounded-4" style="background: rgba(0,0,0,0.2);">
+            <li class="nav-item">
+              <a class="nav-link active rounded-pill px-4" href="index.html">Cartelera</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white rounded-pill px-4 hover-nav" href="compra.html">Comprar Tickets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white rounded-pill px-4 hover-nav" href="multimedia.html">Multimedia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white rounded-pill px-4 hover-nav" href="contacto.html">Contáctanos</a>
+            </li>
+          </ul>
+          
+          <!-- Barra de Búsqueda -->
+          <form class="d-flex ms-lg-4 mt-3 mt-lg-0" role="search" style="max-width: 250px; margin: 0 auto;">
+            <input class="form-control me-2 rounded-pill text-white border-danger" type="search" placeholder="Buscar película..." aria-label="Search" style="background: rgba(15, 15, 25, 0.6) !important;">
+            <button class="btn btn-outline-danger rounded-pill" type="submit">🔍</button>
+          </form>
+        </div>
       </div>
     </nav>
 
@@ -155,6 +162,126 @@
                 <p class="card-text mb-1"><strong>🕒 Horarios:</strong> 2:00 PM - 7:00 PM</p>
                 <p class="card-text mb-1"><strong>🔞 Clasificación:</strong> PG-13</p>
                 <p class="card-text text-warning fs-6 fw-bold mt-auto mb-0">💰 $19.000 COP</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="compra.html" class="btn btn-danger w-100 rounded-pill fw-bold">Comprar Tickets</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Película 6: Deadpool & Wolverine -->
+          <div class="col">
+            <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
+              <a href="multimedia.html#trailer-deadpool" class="overflow-hidden d-block">
+                <img src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" class="card-img-top" style="height:160px;object-fit:cover;" alt="Deadpool & Wolverine">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold fs-5">Deadpool & Wolverine</h5>
+                <hr class="border-danger my-2">
+                <p class="card-text mb-1"><strong>🎬 Género:</strong> Acción / Comedia</p>
+                <p class="card-text mb-1"><strong>🕒 Horarios:</strong> 5:00 PM - 9:00 PM</p>
+                <p class="card-text mb-1"><strong>🔞 Clasificación:</strong> R</p>
+                <p class="card-text text-warning fs-6 fw-bold mt-auto mb-0">💰 $20.000 COP</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="compra.html" class="btn btn-danger w-100 rounded-pill fw-bold">Comprar Tickets</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Película 7: Spider-Man: No Way Home -->
+          <div class="col">
+            <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
+              <a href="multimedia.html#trailer-spiderman" class="overflow-hidden d-block">
+                <img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1R8M2zA2T2gq4g.jpg" class="card-img-top" style="height:160px;object-fit:cover;" alt="Spider-Man: No Way Home">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold fs-5">Spider-Man: No Way Home</h5>
+                <hr class="border-danger my-2">
+                <p class="card-text mb-1"><strong>🎬 Género:</strong> Acción / Aventura</p>
+                <p class="card-text mb-1"><strong>🕒 Horarios:</strong> 1:00 PM - 6:00 PM</p>
+                <p class="card-text mb-1"><strong>🔞 Clasificación:</strong> PG-13</p>
+                <p class="card-text text-warning fs-6 fw-bold mt-auto mb-0">💰 $21.000 COP</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="compra.html" class="btn btn-danger w-100 rounded-pill fw-bold">Comprar Tickets</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Película 8: The Batman -->
+          <div class="col">
+            <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
+              <a href="multimedia.html#trailer-batman" class="overflow-hidden d-block">
+                <img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg" class="card-img-top" style="height:160px;object-fit:cover;" alt="The Batman">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold fs-5">The Batman</h5>
+                <hr class="border-danger my-2">
+                <p class="card-text mb-1"><strong>🎬 Género:</strong> Acción / Suspenso</p>
+                <p class="card-text mb-1"><strong>🕒 Horarios:</strong> 3:30 PM - 8:30 PM</p>
+                <p class="card-text mb-1"><strong>🔞 Clasificación:</strong> PG-13</p>
+                <p class="card-text text-warning fs-6 fw-bold mt-auto mb-0">💰 $19.000 COP</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="compra.html" class="btn btn-danger w-100 rounded-pill fw-bold">Comprar Tickets</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Película 9: Avatar: El Camino del Agua -->
+          <div class="col">
+            <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
+              <a href="multimedia.html#trailer-avatar" class="overflow-hidden d-block">
+                <img src="https://image.tmdb.org/t/p/w500/t6HIqrHeCPsKzUhyiFpXk6B0vYq.jpg" class="card-img-top" style="height:160px;object-fit:cover;" alt="Avatar 2">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold fs-5">Avatar 2</h5>
+                <hr class="border-danger my-2">
+                <p class="card-text mb-1"><strong>🎬 Género:</strong> Ciencia Ficción</p>
+                <p class="card-text mb-1"><strong>🕒 Horarios:</strong> 2:00 PM - 7:30 PM</p>
+                <p class="card-text mb-1"><strong>🔞 Clasificación:</strong> PG-13</p>
+                <p class="card-text text-warning fs-6 fw-bold mt-auto mb-0">💰 $23.000 COP</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="compra.html" class="btn btn-danger w-100 rounded-pill fw-bold">Comprar Tickets</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Película 10: Avengers: Endgame -->
+          <div class="col">
+            <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
+              <a href="multimedia.html#trailer-avengers" class="overflow-hidden d-block">
+                <img src="https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg" class="card-img-top" style="height:160px;object-fit:cover;" alt="Avengers: Endgame">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold fs-5">Avengers: Endgame</h5>
+                <hr class="border-danger my-2">
+                <p class="card-text mb-1"><strong>🎬 Género:</strong> Acción / Ciencia Ficción</p>
+                <p class="card-text mb-1"><strong>🕒 Horarios:</strong> 12:00 PM - 5:30 PM</p>
+                <p class="card-text mb-1"><strong>🔞 Clasificación:</strong> PG-13</p>
+                <p class="card-text text-warning fs-6 fw-bold mt-auto mb-0">💰 $25.000 COP</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="compra.html" class="btn btn-danger w-100 rounded-pill fw-bold">Comprar Tickets</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Película 11: Joker -->
+          <div class="col">
+            <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
+              <a href="multimedia.html#trailer-joker" class="overflow-hidden d-block">
+                <img src="https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg" class="card-img-top" style="height:160px;object-fit:cover;" alt="Joker">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold fs-5">Joker</h5>
+                <hr class="border-danger my-2">
+                <p class="card-text mb-1"><strong>🎬 Género:</strong> Drama / Suspenso</p>
+                <p class="card-text mb-1"><strong>🕒 Horarios:</strong> 4:30 PM - 9:30 PM</p>
+                <p class="card-text mb-1"><strong>🔞 Clasificación:</strong> R</p>
+                <p class="card-text text-warning fs-6 fw-bold mt-auto mb-0">💰 $18.000 COP</p>
               </div>
               <div class="card-footer bg-transparent border-0 pb-3">
                 <a href="compra.html" class="btn btn-danger w-100 rounded-pill fw-bold">Comprar Tickets</a>

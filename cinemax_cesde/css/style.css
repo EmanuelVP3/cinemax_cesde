@@ -260,9 +260,32 @@ iframe {
   border-radius: 5px;
   font-weight: bold;
   margin-bottom: 20px;
+  transition: all 0.3s ease;
 }
 .cerrar-cine:hover {
-  background-color: #c0392b;
+  background-color: #e74c3c;
+  border-color: #e74c3c;
+  transform: scale(1.1); /* Ligero zoom extra en hover */
+  /* GLOW NEÓN al pasar el mouse */
+  box-shadow: 0 0 8px rgba(231, 76, 60, 0.6),
+              0 0 20px rgba(231, 76, 60, 0.3);
+}
+
+/* ANIMACIÓN DEL BOTÓN CERRAR (Estilo Tailwind pulse/bounce) */
+@keyframes tailwindPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(231, 76, 60, 0);
+  }
+}
+
+.btn-close-anim {
+  animation: tailwindPulse 2s infinite;
+  border: 2px solid #e74c3c;
 }
 /* ========== DISEÑO RESPONSIVO (@media queries) ========== */
 
@@ -426,4 +449,60 @@ iframe {
 .bg-glass-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(231, 76, 60, 0.35) !important;
+}
+
+/* ========== ANIMACIONES DEL LOGO (TÍTULO PRINCIPAL) ========== */
+.logo-cinemax {
+  display: inline-block;
+  /* Entra más lento, con más segundos */
+  animation: logoAparecer 6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+@keyframes logoAparecer {
+  0% { 
+    transform: scale(0.3); 
+    opacity: 0; 
+    text-shadow: none;
+  }
+  50% { 
+    transform: scale(1.8); /* Se hace muy grande a la mitad */
+    opacity: 1; 
+    /* Brillo rojo intenso cuando está grande */
+    text-shadow: 0 0 20px #e74c3c, 0 0 40px #e74c3c, 0 0 60px #ff6b6b;
+  }
+  100% { 
+    transform: scale(1); /* Termina en su tamaño normal (chiquito) */
+    opacity: 1; 
+    text-shadow: none; /* Pierde el brillo estático (se le queda el efecto onda si lo tocas) */
+  }
+}
+
+.logo-cinemax:hover {
+  transform: scale(1.15); /* Al tocarlo se hace más grande */
+}
+
+.logo-cinemax span {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+/* Efecto de onda letra por letra MUCHO MÁS RÁPIDO (0.4s) */
+.logo-cinemax:hover span {
+  animation: neonWave 0.4s infinite;
+  animation-delay: calc(var(--i) * 0.05s);
+}
+
+@keyframes neonWave {
+  0%, 100% {
+    color: inherit;
+    text-shadow: none;
+    transform: translateY(0);
+  }
+  50% {
+    color: #ffffff;
+    text-shadow: 0 0 10px #e74c3c, 0 0 20px #e74c3c, 0 0 40px #ff6b6b;
+    transform: translateY(-8px);
+  }
 }

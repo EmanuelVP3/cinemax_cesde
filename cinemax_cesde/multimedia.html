@@ -15,7 +15,9 @@
   <body>
     <!-- Cabecera con Bootstrap -->
     <header class="text-white text-center py-4">
-      <h1 class="display-4 fw-bold">🎬 CineMax CESDE</h1>
+      <h1 class="display-4 fw-bold logo-cinemax">
+        <span style="--i:0">🎬</span>&nbsp;<span style="--i:1">C</span><span style="--i:2">i</span><span style="--i:3">n</span><span style="--i:4">e</span><span style="--i:5">M</span><span style="--i:6">a</span><span style="--i:7">x</span>&nbsp;<span style="--i:8">C</span><span style="--i:9">E</span><span style="--i:10">S</span><span style="--i:11">D</span><span style="--i:12">E</span>
+      </h1>
       <p class="lead mb-3">Tu cine favorito - Vive la experiencia en grande</p>
       <div class="d-flex justify-content-center gap-2">
         <a href="login.html#login" class="btn-ingresar">Iniciar sesión</a>
@@ -44,64 +46,96 @@
     </nav>
 
     <main>
-      <section id="multimedia">
-        <h2>🎞️ Multimedia</h2>
-        <h3>Imagen: Sala de Cine</h3>
-        <img
-          src="https://images.unsplash.com/photo-1585647347483-22b66260dfff?w=800"
-          alt="Sala de cine con pantalla y butacas"
-          width="500"
-        />
-        <hr />
-        <h3>Trailer: Dune: Parte 2</h3>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/Way9Dexny3w"
-          title="Trailer oficial de Dune: Parte 2"
-          frameborder="0"
-          allow="
-            accelerometer;
-            autoplay;
-            clipboard-write;
-            encrypted-media;
-            gyroscope;
-            picture-in-picture;
-            web-share;
-          "
-          allowfullscreen
-        ></iframe>
-        <hr />
-        <h3>Imagen: Oppenheimer</h3>
-        <img
-          src="./media/oppenheimer_ver3.jpg"
-          alt="Póster de Oppenheimer"
-          width="300"
-        />
-        <hr />
-        <h3>Trailer: Inside Out 2</h3>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/LEjhY15eCx0"
-          title="Trailer oficial de Inside Out 2"
-          frameborder="0"
-          allow="
-            accelerometer;
-            autoplay;
-            clipboard-write;
-            encrypted-media;
-            gyroscope;
-            picture-in-picture;
-            web-share;
-          "
-          allowfullscreen
-        ></iframe>
+      <section id="multimedia" class="container my-5">
+        <h2 class="text-center text-danger fw-bold display-6 mb-4">🎞️ Galería de Trailers</h2>
+        <p class="text-center text-light mb-5">Selecciona una película para ver su trailer oficial a pantalla completa.</p>
+        
+        <!-- Cuadrícula de Selección de Trailers -->
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4 justify-content-center">
+          
+          <div class="col text-center">
+            <a href="#trailer-dune" class="text-decoration-none">
+              <img src="./media/dune_part_two.jpg" alt="Dune" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
+              <h5 class="text-white">Dune: Parte 2</h5>
+            </a>
+          </div>
+
+          <div class="col text-center">
+            <a href="#trailer-godzilla" class="text-decoration-none">
+              <img src="./media/godzilla-vs-kong.jpg" alt="Godzilla" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
+              <h5 class="text-white">Godzilla vs. Kong</h5>
+            </a>
+          </div>
+
+          <div class="col text-center">
+            <a href="#trailer-insideout" class="text-decoration-none">
+              <img src="./media/Inside_Out_2_poster.jpg" alt="Inside Out 2" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
+              <h5 class="text-white">Inside Out 2</h5>
+            </a>
+          </div>
+
+          <div class="col text-center">
+            <a href="#trailer-oppenheimer" class="text-decoration-none">
+              <img src="./media/oppenheimer_ver3.jpg" alt="Oppenheimer" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
+              <h5 class="text-white">Oppenheimer</h5>
+            </a>
+          </div>
+
+          <div class="col text-center">
+            <a href="#trailer-lotr" class="text-decoration-none">
+              <img src="./media/The-Lord-Of-The-Rings.jpg" alt="El Señor de los Anillos" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
+              <h5 class="text-white">El Señor de los Anillos</h5>
+            </a>
+          </div>
+
+          <div class="col text-center">
+            <a href="#trailer-deadpool" class="text-decoration-none">
+              <img src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" alt="Deadpool & Wolverine" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
+              <h5 class="text-white">Deadpool & Wolverine</h5>
+            </a>
+          </div>
+
+          <div class="col text-center">
+            <a href="#trailer-spiderman" class="text-decoration-none">
+              <img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1R8M2zA2T2gq4g.jpg" alt="Spider-Man" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
+              <h5 class="text-white">Spider-Man: No Way Home</h5>
+            </a>
+          </div>
+
+          <div class="col text-center">
+            <a href="#trailer-batman" class="text-decoration-none">
+              <img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg" alt="The Batman" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
+              <h5 class="text-white">The Batman</h5>
+            </a>
+          </div>
+
+          <div class="col text-center">
+            <a href="#trailer-avatar" class="text-decoration-none">
+              <img src="https://image.tmdb.org/t/p/w500/t6HIqrHeCPsKzUhyiFpXk6B0vYq.jpg" alt="Avatar" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
+              <h5 class="text-white">Avatar 2</h5>
+            </a>
+          </div>
+
+          <div class="col text-center">
+            <a href="#trailer-avengers" class="text-decoration-none">
+              <img src="https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg" alt="Avengers" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
+              <h5 class="text-white">Avengers: Endgame</h5>
+            </a>
+          </div>
+
+          <div class="col text-center">
+            <a href="#trailer-joker" class="text-decoration-none">
+              <img src="https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg" alt="Joker" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
+              <h5 class="text-white">Joker</h5>
+            </a>
+          </div>
+
+        </div>
       </section>
 
       <!-- Modos Cine -->
       <section id="trailer-dune" class="modal-cine">
-        <a href="#" class="cerrar-cine">❌ Cerrar</a>
+        <a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a>
         <h2>Dune: Parte 2</h2>
         <div class="escenario-cine">
           <span class="crispetas">🍿</span>
@@ -127,7 +161,7 @@
       </section>
 
       <section id="trailer-godzilla" class="modal-cine">
-        <a href="#" class="cerrar-cine">❌ Cerrar</a>
+        <a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a>
         <h2>Godzilla vs. Kong</h2>
         <div class="escenario-cine">
           <span class="crispetas">🍿</span>
@@ -153,7 +187,7 @@
       </section>
 
       <section id="trailer-insideout" class="modal-cine">
-        <a href="#" class="cerrar-cine">❌ Cerrar</a>
+        <a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a>
         <h2>Inside Out 2</h2>
         <div class="escenario-cine">
           <span class="crispetas">🍿</span>
@@ -179,7 +213,7 @@
       </section>
 
       <section id="trailer-oppenheimer" class="modal-cine">
-        <a href="#" class="cerrar-cine">❌ Cerrar</a>
+        <a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a>
         <h2>Oppenheimer</h2>
         <div class="escenario-cine">
           <span class="crispetas">🍿</span>
@@ -205,7 +239,7 @@
       </section>
 
       <section id="trailer-lotr" class="modal-cine">
-        <a href="#" class="cerrar-cine">❌ Cerrar</a>
+        <a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a>
         <h2>El Señor de los Anillos</h2>
         <div class="escenario-cine">
           <span class="crispetas">🍿</span>
@@ -229,6 +263,67 @@
           <span class="crispetas">🍿</span>
         </div>
       </section>
+
+      <section id="trailer-deadpool" class="modal-cine">
+        <a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a>
+        <h2>Deadpool & Wolverine</h2>
+        <div class="escenario-cine">
+          <span class="crispetas">🍿</span>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/73_1biuggHI" frameborder="0" allowfullscreen></iframe>
+          <span class="crispetas">🍿</span>
+        </div>
+      </section>
+
+      <section id="trailer-spiderman" class="modal-cine">
+        <a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a>
+        <h2>Spider-Man: No Way Home</h2>
+        <div class="escenario-cine">
+          <span class="crispetas">🍿</span>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/rt-2cxcl_Ro" frameborder="0" allowfullscreen></iframe>
+          <span class="crispetas">🍿</span>
+        </div>
+      </section>
+
+      <section id="trailer-batman" class="modal-cine">
+        <a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a>
+        <h2>The Batman</h2>
+        <div class="escenario-cine">
+          <span class="crispetas">🍿</span>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/mqqft2x_Aa4" frameborder="0" allowfullscreen></iframe>
+          <span class="crispetas">🍿</span>
+        </div>
+      </section>
+
+      <section id="trailer-avatar" class="modal-cine">
+        <a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a>
+        <h2>Avatar: El Camino del Agua</h2>
+        <div class="escenario-cine">
+          <span class="crispetas">🍿</span>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/a8Gx8wiNbs8" frameborder="0" allowfullscreen></iframe>
+          <span class="crispetas">🍿</span>
+        </div>
+      </section>
+
+      <section id="trailer-avengers" class="modal-cine">
+        <a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a>
+        <h2>Avengers: Endgame</h2>
+        <div class="escenario-cine">
+          <span class="crispetas">🍿</span>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allowfullscreen></iframe>
+          <span class="crispetas">🍿</span>
+        </div>
+      </section>
+
+      <section id="trailer-joker" class="modal-cine">
+        <a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a>
+        <h2>Joker</h2>
+        <div class="escenario-cine">
+          <span class="crispetas">🍿</span>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/zAGVQLHvwOY" frameborder="0" allowfullscreen></iframe>
+          <span class="crispetas">🍿</span>
+        </div>
+      </section>
+
     </main>
     <footer>
       <p>

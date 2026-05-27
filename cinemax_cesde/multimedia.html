@@ -1,25 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CineMax CESDE - Multimedia</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header class="bg-black text-white text-center py-4 border-bottom border-danger header-neon">
-      <h1 class="m-0 fw-bolder logo-cinemax display-5">
+    <!-- Tu Cabecera Original con esteroides de Bootstrap -->
+    <header class="bg-black text-white text-center py-4 border-bottom border-danger header-neon d-none">
+      <h1 class="display-4 fw-bold logo-cinemax">
         <span style="--i:0">🎬</span>&nbsp;<span style="--i:1">C</span><span style="--i:2">i</span><span style="--i:3">n</span><span style="--i:4">e</span><span style="--i:5">M</span><span style="--i:6">a</span><span style="--i:7">x</span>&nbsp;<span style="--i:8">C</span><span style="--i:9">E</span><span style="--i:10">S</span><span style="--i:11">D</span><span style="--i:12">E</span>
       </h1>
       <p class="lead mb-3">Tu cine favorito - Vive la experiencia en grande</p>
       <div class="d-flex gap-2 justify-content-center">
-        <a href="login.html#login" class="btn-auth">Iniciar sesión</a>
-        <a href="login.html#registro" class="btn-auth">Registrarse</a>
-      </div>
+            <a href="login.html#login" class="btn-auth">Iniciar sesión</a>
+            <a href="login.html#registro" class="btn-auth">Registrarse</a>
+          </div>
     </header>
 
     <!-- Nueva Barra de Navegación Transparente -->
@@ -35,18 +38,18 @@
         
         <!-- Contenido de la barra (Enlaces) -->
         <div class="collapse navbar-collapse justify-content-center" id="menuNavegacion">
-          <ul class="navbar-nav gap-2 text-center mt-3 mt-lg-0 p-2 p-lg-0 rounded-4" style="background: rgba(0,0,0,0.2);">
+          <ul class="navbar-nav ms-auto gap-3">
             <li class="nav-item">
-              <a class="nav-link text-white rounded-pill px-4 hover-nav" href="index.html">Cartelera</a>
+              <a class="nav-link text-white" href="index.html">Cartelera</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white rounded-pill px-4 hover-nav" href="compra.html">Comprar Tickets</a>
+              <a class="nav-link text-white" href="compra.html">Comprar Tickets</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active rounded-pill px-4 fw-bold nav-neon-active" href="multimedia.html">Multimedia</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white rounded-pill px-4 hover-nav" href="contacto.html">Contáctanos</a>
+              <a class="nav-link text-white" href="contacto.html">Contáctanos</a>
             </li>
           </ul>
         </div>
@@ -54,167 +57,423 @@
     </nav>
 
     <main>
-      <section id="multimedia" class="container my-5 position-relative">
+      <section id="cartelera" class="container my-5 position-relative">
         
-        <h2 class="text-center text-danger fw-bold display-6 mb-4">🎞️ Galería de Trailers</h2>
-        <p class="text-center text-light mb-5">Selecciona una película para ver su trailer oficial a pantalla completa.</p>
+        <h2 class="text-center text-danger fw-bold display-6 mb-5">🎬 Cartelera de Películas</h2>
         
-        <div class="row row-cols-2 row-cols-md-4 g-4 justify-content-center mx-auto" style="max-width: 1000px;">
-          <div class="col text-center">
-            <a href="#trailer-dune" class="text-decoration-none">
-              <img src="./media/dune_part_two.jpg" alt="Dune: Parte 2" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
-              <h5 class="text-white">Dune: Parte 2</h5>
-            </a>
+        <!-- Contenedor Rejilla de Bootstrap (Grid) -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+          
+          <!-- Película 1: Dune -->
+          <div class="col">
+            <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
+              <a href="#trailer-dune" class="overflow-hidden d-block">
+                <img src="./media/dune_part_two.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Dune: Parte 2">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold fs-5">Dune: Parte 2</h5>
+                <hr class="border-danger my-2">
+                <p class="card-text mb-1"><strong>🎬 Género:</strong> Ciencia Ficción</p>
+                <p class="card-text mb-1"><strong>🕒 Horarios:</strong> 3:00 PM - 6:30 PM</p>
+                <p class="card-text mb-1"><strong>🔞 Clasificación:</strong> PG-13</p>
+                <p class="card-text text-warning fs-6 fw-bold mt-auto mb-0">💰 $22.000 COP</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="compra.html" class="btn btn-danger w-100 rounded-pill fw-bold">Comprar Tickets</a>
+              </div>
+            </div>
           </div>
-          <div class="col text-center">
-            <a href="#trailer-godzilla" class="text-decoration-none">
-              <img src="./media/godzilla-vs-kong.jpg" alt="Godzilla vs Kong" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
-              <h5 class="text-white">Godzilla vs. Kong</h5>
-            </a>
+
+          <!-- Película 2: Godzilla vs. Kong -->
+          <div class="col">
+            <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
+              <a href="#trailer-godzilla" class="overflow-hidden d-block">
+                <img src="./media/godzilla-vs-kong.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Godzilla vs. Kong">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold fs-5">Godzilla vs. Kong</h5>
+                <hr class="border-danger my-2">
+                <p class="card-text mb-1"><strong>🎬 Género:</strong> Acción / Monstruos</p>
+                <p class="card-text mb-1"><strong>🕒 Horarios:</strong> 1:00 PM - 4:00 PM - 8:00 PM</p>
+                <p class="card-text mb-1"><strong>🔞 Clasificación:</strong> PG-13</p>
+                <p class="card-text text-warning fs-6 fw-bold mt-auto mb-0">💰 $22.000 COP</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="compra.html" class="btn btn-danger w-100 rounded-pill fw-bold">Comprar Tickets</a>
+              </div>
+            </div>
           </div>
-          <div class="col text-center">
-            <a href="#trailer-insideout" class="text-decoration-none">
-              <img src="./media/Inside_Out_2_poster.jpg" alt="Inside Out 2" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
-              <h5 class="text-white">Inside Out 2</h5>
-            </a>
+
+          <!-- Película 3: Inside Out 2 -->
+          <div class="col">
+            <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
+              <a href="#trailer-insideout" class="overflow-hidden d-block">
+                <img src="./media/Inside_Out_2_poster.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Inside Out 2">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold fs-5">Inside Out 2</h5>
+                <hr class="border-danger my-2">
+                <p class="card-text mb-1"><strong>🎬 Género:</strong> Animación / Comedia</p>
+                <p class="card-text mb-1"><strong>🕒 Horarios:</strong> 11:00 AM - 2:30 PM - 5:00 PM</p>
+                <p class="card-text mb-1"><strong>🔞 Clasificación:</strong> G (Todo público)</p>
+                <p class="card-text text-warning fs-6 fw-bold mt-auto mb-0">💰 $15.000 COP</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="compra.html" class="btn btn-danger w-100 rounded-pill fw-bold">Comprar Tickets</a>
+              </div>
+            </div>
           </div>
-          <div class="col text-center">
-            <a href="#trailer-oppenheimer" class="text-decoration-none">
-              <img src="./media/oppenheimer_ver3.jpg" alt="Oppenheimer" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
-              <h5 class="text-white">Oppenheimer</h5>
-            </a>
+
+          <!-- Película 4: Oppenheimer -->
+          <div class="col">
+            <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
+              <a href="#trailer-oppenheimer" class="overflow-hidden d-block">
+                <img src="./media/oppenheimer_ver3.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Oppenheimer">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold fs-5">Oppenheimer</h5>
+                <hr class="border-danger my-2">
+                <p class="card-text mb-1"><strong>🎬 Género:</strong> Drama / Historia</p>
+                <p class="card-text mb-1"><strong>🕒 Horarios:</strong> 4:00 PM - 8:00 PM</p>
+                <p class="card-text mb-1"><strong>🔞 Clasificación:</strong> R (Mayores de 17)</p>
+                <p class="card-text text-warning fs-6 fw-bold mt-auto mb-0">💰 $19.000 COP</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="compra.html" class="btn btn-danger w-100 rounded-pill fw-bold">Comprar Tickets</a>
+              </div>
+            </div>
           </div>
-          <div class="col text-center">
-            <a href="#trailer-lotr" class="text-decoration-none">
-              <img src="./media/The-Lord-Of-The-Rings.jpg" alt="El Señor de los Anillos" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
-              <h5 class="text-white">El Señor de los Anillos</h5>
-            </a>
+
+          <!-- Película 5: El Señor de los Anillos -->
+          <div class="col">
+            <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
+              <a href="#trailer-lotr" class="overflow-hidden d-block">
+                <img src="./media/The-Lord-Of-The-Rings.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="El Señor de los Anillos">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold fs-5">El Señor de los Anillos</h5>
+                <hr class="border-danger my-2">
+                <p class="card-text mb-1"><strong>🎬 Género:</strong> Fantasía / Aventura</p>
+                <p class="card-text mb-1"><strong>🕒 Horarios:</strong> 2:00 PM - 7:00 PM</p>
+                <p class="card-text mb-1"><strong>🔞 Clasificación:</strong> PG-13</p>
+                <p class="card-text text-warning fs-6 fw-bold mt-auto mb-0">💰 $19.000 COP</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="compra.html" class="btn btn-danger w-100 rounded-pill fw-bold">Comprar Tickets</a>
+              </div>
+            </div>
           </div>
-          <div class="col text-center">
-            <a href="#trailer-deadpool" class="text-decoration-none">
-              <img src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" alt="Deadpool" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
-              <h5 class="text-white">Deadpool & Wolverine</h5>
-            </a>
+
+          <!-- Película 6: Deadpool & Wolverine -->
+          <div class="col">
+            <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
+              <a href="#trailer-deadpool" class="overflow-hidden d-block">
+                <img src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Deadpool & Wolverine">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold fs-5">Deadpool & Wolverine</h5>
+                <hr class="border-danger my-2">
+                <p class="card-text mb-1"><strong>🎬 Género:</strong> Acción / Comedia</p>
+                <p class="card-text mb-1"><strong>🕒 Horarios:</strong> 5:00 PM - 9:00 PM</p>
+                <p class="card-text mb-1"><strong>🔞 Clasificación:</strong> R</p>
+                <p class="card-text text-warning fs-6 fw-bold mt-auto mb-0">💰 $20.000 COP</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="compra.html" class="btn btn-danger w-100 rounded-pill fw-bold">Comprar Tickets</a>
+              </div>
+            </div>
           </div>
-          <div class="col text-center">
-            <a href="#trailer-spiderman" class="text-decoration-none">
-              <img src="https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg" alt="Spider-Man" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
-              <h5 class="text-white">Spider-Man: No Way Home</h5>
-            </a>
+
+          <!-- Película 7: Spider-Man: No Way Home -->
+          <div class="col">
+            <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
+              <a href="#trailer-spiderman" class="overflow-hidden d-block">
+                <img src="https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Spider-Man: No Way Home">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold fs-5">Spider-Man: No Way Home</h5>
+                <hr class="border-danger my-2">
+                <p class="card-text mb-1"><strong>🎬 Género:</strong> Acción / Aventura</p>
+                <p class="card-text mb-1"><strong>🕒 Horarios:</strong> 1:00 PM - 6:00 PM</p>
+                <p class="card-text mb-1"><strong>🔞 Clasificación:</strong> PG-13</p>
+                <p class="card-text text-warning fs-6 fw-bold mt-auto mb-0">💰 $21.000 COP</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="compra.html" class="btn btn-danger w-100 rounded-pill fw-bold">Comprar Tickets</a>
+              </div>
+            </div>
           </div>
-          <div class="col text-center">
-            <a href="#trailer-batman" class="text-decoration-none">
-              <img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg" alt="Batman" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
-              <h5 class="text-white">The Batman</h5>
-            </a>
+
+          <!-- Película 8: The Batman -->
+          <div class="col">
+            <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
+              <a href="#trailer-batman" class="overflow-hidden d-block">
+                <img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="The Batman">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold fs-5">The Batman</h5>
+                <hr class="border-danger my-2">
+                <p class="card-text mb-1"><strong>🎬 Género:</strong> Acción / Suspenso</p>
+                <p class="card-text mb-1"><strong>🕒 Horarios:</strong> 3:30 PM - 8:30 PM</p>
+                <p class="card-text mb-1"><strong>🔞 Clasificación:</strong> PG-13</p>
+                <p class="card-text text-warning fs-6 fw-bold mt-auto mb-0">💰 $19.000 COP</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="compra.html" class="btn btn-danger w-100 rounded-pill fw-bold">Comprar Tickets</a>
+              </div>
+            </div>
           </div>
-          <div class="col text-center">
-            <a href="#trailer-avatar" class="text-decoration-none">
-              <img src="https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg" alt="Avatar" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
-              <h5 class="text-white">Avatar 2</h5>
-            </a>
+
+          <!-- Película 9: Avatar: El Camino del Agua -->
+          <div class="col">
+            <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
+              <a href="#trailer-avatar" class="overflow-hidden d-block">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Avatar 2">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold fs-5">Avatar 2</h5>
+                <hr class="border-danger my-2">
+                <p class="card-text mb-1"><strong>🎬 Género:</strong> Ciencia Ficción</p>
+                <p class="card-text mb-1"><strong>🕒 Horarios:</strong> 2:00 PM - 7:30 PM</p>
+                <p class="card-text mb-1"><strong>🔞 Clasificación:</strong> PG-13</p>
+                <p class="card-text text-warning fs-6 fw-bold mt-auto mb-0">💰 $23.000 COP</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="compra.html" class="btn btn-danger w-100 rounded-pill fw-bold">Comprar Tickets</a>
+              </div>
+            </div>
           </div>
-          <div class="col text-center">
-            <a href="#trailer-avengers" class="text-decoration-none">
-              <img src="https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg" alt="Avengers" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
-              <h5 class="text-white">Avengers: Endgame</h5>
-            </a>
+
+          <!-- Película 10: Avengers: Endgame -->
+          <div class="col">
+            <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
+              <a href="#trailer-avengers" class="overflow-hidden d-block">
+                <img src="https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Avengers: Endgame">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold fs-5">Avengers: Endgame</h5>
+                <hr class="border-danger my-2">
+                <p class="card-text mb-1"><strong>🎬 Género:</strong> Acción / Ciencia Ficción</p>
+                <p class="card-text mb-1"><strong>🕒 Horarios:</strong> 12:00 PM - 5:30 PM</p>
+                <p class="card-text mb-1"><strong>🔞 Clasificación:</strong> PG-13</p>
+                <p class="card-text text-warning fs-6 fw-bold mt-auto mb-0">💰 $25.000 COP</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="compra.html" class="btn btn-danger w-100 rounded-pill fw-bold">Comprar Tickets</a>
+              </div>
+            </div>
           </div>
-          <div class="col text-center">
-            <a href="#trailer-joker" class="text-decoration-none">
-              <img src="https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg" alt="Joker" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
-              <h5 class="text-white">Joker</h5>
-            </a>
+
+          <!-- Película 11: Joker -->
+          <div class="col">
+            <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
+              <a href="#trailer-joker" class="overflow-hidden d-block">
+                <img src="https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Joker">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold fs-5">Joker</h5>
+                <hr class="border-danger my-2">
+                <p class="card-text mb-1"><strong>🎬 Género:</strong> Drama / Suspenso</p>
+                <p class="card-text mb-1"><strong>🕒 Horarios:</strong> 4:30 PM - 9:30 PM</p>
+                <p class="card-text mb-1"><strong>🔞 Clasificación:</strong> R</p>
+                <p class="card-text text-warning fs-6 fw-bold mt-auto mb-0">💰 $18.000 COP</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="compra.html" class="btn btn-danger w-100 rounded-pill fw-bold">Comprar Tickets</a>
+              </div>
+            </div>
           </div>
-          <div class="col text-center">
-            <a href="#trailer-interstellar" class="text-decoration-none">
-              <img src="https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg" alt="Interstellar" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
-              <h5 class="text-white">Interstellar</h5>
-            </a>
+
+          <!-- Película 12: Interstellar -->
+          <div class="col">
+            <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
+              <a href="#trailer-interstellar" class="overflow-hidden d-block">
+                <img src="https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Interstellar">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold fs-5">Interstellar</h5>
+                <hr class="border-danger my-2">
+                <p class="card-text mb-1"><strong>🎬 Género:</strong> Ciencia Ficción</p>
+                <p class="card-text mb-1"><strong>🕒 Horarios:</strong> 1:00 PM - 5:00 PM</p>
+                <p class="card-text mb-1"><strong>🔞 Clasificación:</strong> PG-13</p>
+                <p class="card-text text-warning fs-6 fw-bold mt-auto mb-0">💰 $18.000 COP</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="compra.html" class="btn btn-danger w-100 rounded-pill fw-bold">Comprar Tickets</a>
+              </div>
+            </div>
           </div>
-          <div class="col text-center">
-            <a href="#trailer-matrix" class="text-decoration-none">
-              <img src="https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg" alt="Matrix" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
-              <h5 class="text-white">The Matrix</h5>
-            </a>
+
+          <!-- Película 13: The Matrix -->
+          <div class="col">
+            <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
+              <a href="#trailer-matrix" class="overflow-hidden d-block">
+                <img src="https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="The Matrix">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold fs-5">The Matrix</h5>
+                <hr class="border-danger my-2">
+                <p class="card-text mb-1"><strong>🎬 Género:</strong> Acción / Ciencia Ficción</p>
+                <p class="card-text mb-1"><strong>🕒 Horarios:</strong> 4:00 PM - 8:00 PM</p>
+                <p class="card-text mb-1"><strong>🔞 Clasificación:</strong> R</p>
+                <p class="card-text text-warning fs-6 fw-bold mt-auto mb-0">💰 $17.000 COP</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="compra.html" class="btn btn-danger w-100 rounded-pill fw-bold">Comprar Tickets</a>
+              </div>
+            </div>
           </div>
-          <div class="col text-center">
-            <a href="#trailer-inception" class="text-decoration-none">
-              <img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg" alt="Inception" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
-              <h5 class="text-white">Inception</h5>
-            </a>
+
+          <!-- Película 14: Inception -->
+          <div class="col">
+            <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
+              <a href="#trailer-inception" class="overflow-hidden d-block">
+                <img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Inception">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold fs-5">Inception</h5>
+                <hr class="border-danger my-2">
+                <p class="card-text mb-1"><strong>🎬 Género:</strong> Ciencia Ficción / Thriller</p>
+                <p class="card-text mb-1"><strong>🕒 Horarios:</strong> 6:00 PM - 10:00 PM</p>
+                <p class="card-text mb-1"><strong>🔞 Clasificación:</strong> PG-13</p>
+                <p class="card-text text-warning fs-6 fw-bold mt-auto mb-0">💰 $21.000 COP</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="compra.html" class="btn btn-danger w-100 rounded-pill fw-bold">Comprar Tickets</a>
+              </div>
+            </div>
           </div>
-          <div class="col text-center">
-            <a href="#trailer-gladiator" class="text-decoration-none">
-              <img src="https://upload.wikimedia.org/wikipedia/en/f/fb/Gladiator_%282000_film_poster%29.png" alt="Gladiator" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
-              <h5 class="text-white">Gladiator</h5>
-            </a>
+
+          <!-- Película 15: Gladiator -->
+          <div class="col">
+            <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
+              <a href="#trailer-gladiator" class="overflow-hidden d-block">
+                <img src="https://upload.wikimedia.org/wikipedia/en/f/fb/Gladiator_%282000_film_poster%29.png" class="card-img-top" style="height:200px;object-fit:cover;" alt="Gladiator">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold fs-5">Gladiator</h5>
+                <hr class="border-danger my-2">
+                <p class="card-text mb-1"><strong>🎬 Género:</strong> Acción / Histórico</p>
+                <p class="card-text mb-1"><strong>🕒 Horarios:</strong> 2:30 PM - 7:30 PM</p>
+                <p class="card-text mb-1"><strong>🔞 Clasificación:</strong> R</p>
+                <p class="card-text text-warning fs-6 fw-bold mt-auto mb-0">💰 $20.000 COP</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="compra.html" class="btn btn-danger w-100 rounded-pill fw-bold">Comprar Tickets</a>
+              </div>
+            </div>
           </div>
-          <div class="col text-center">
-            <a href="#trailer-croods" class="text-decoration-none">
-              <img src="https://upload.wikimedia.org/wikipedia/en/9/90/The_Croods_poster.jpg" alt="Croods" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
-              <h5 class="text-white">Los Croods</h5>
-            </a>
+
+          <!-- Película 16: Los Croods (Cavernícola) -->
+          <div class="col">
+            <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
+              <a href="#trailer-croods" class="overflow-hidden d-block">
+                <img src="https://upload.wikimedia.org/wikipedia/en/9/90/The_Croods_poster.jpg" class="card-img-top" style="height:200px;object-fit:cover;" alt="Los Croods">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold fs-5">Los Croods</h5>
+                <hr class="border-danger my-2">
+                <p class="card-text mb-1"><strong>🎬 Género:</strong> Animación / Aventura</p>
+                <p class="card-text mb-1"><strong>🕒 Horarios:</strong> 11:00 AM - 3:00 PM</p>
+                <p class="card-text mb-1"><strong>🔞 Clasificación:</strong> G</p>
+                <p class="card-text text-warning fs-6 fw-bold mt-auto mb-0">💰 $15.000 COP</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="compra.html" class="btn btn-danger w-100 rounded-pill fw-bold">Comprar Tickets</a>
+              </div>
+            </div>
           </div>
-          <div class="col text-center">
-            <a href="#trailer-killbill" class="text-decoration-none">
-              <img src="https://upload.wikimedia.org/wikipedia/en/2/2c/Kill_Bill_Volume_1.png" alt="Kill Bill" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
-              <h5 class="text-white">Kill Bill</h5>
-            </a>
-          </div>
-          <div class="col text-center">
-            <a href="#trailer-lionking" class="text-decoration-none">
-              <img src="https://image.tmdb.org/t/p/w500/sKCr78AS8tHZ9ObrN4xY0d1x7eU.jpg" alt="El Rey Leon" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
-              <h5 class="text-white">El Rey León</h5>
-            </a>
-          </div>
-          <div class="col text-center">
-            <a href="#trailer-titanic" class="text-decoration-none">
-              <img src="https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg" alt="Titanic" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
-              <h5 class="text-white">Titanic</h5>
-            </a>
-          </div>
-          <div class="col text-center">
-            <a href="#trailer-jurassic" class="text-decoration-none">
-              <img src="https://image.tmdb.org/t/p/w500/oU7Oq2kFAAlGqbU4Vr19wZ2wTGM.jpg" alt="Jurassic Park" class="img-fluid rounded-4 border border-danger shadow-lg mb-2" style="height: 250px; object-fit: cover;">
-              <h5 class="text-white">Jurassic Park</h5>
-            </a>
-          </div>
-        </div>
+
+          <!-- Película 17: Kill Bill -->
+          <div class="col">
+            <div class="card h-100 bg-glass-card text-white border-danger shadow-lg">
+              <a href="#trailer-killbill" class="overflow-hidden d-block">
+                <img src="https://upload.wikimedia.org/wikipedia/en/2/2c/Kill_Bill_Volume_1.png" class="card-img-top" style="height:200px;object-fit:cover;" alt="Kill Bill">
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold fs-5">Kill Bill</h5>
+                <hr class="border-danger my-2">
+            <input
+              type="text"
+              id="nombreCliente"
+              name="nombreCliente"
+              placeholder="Ej: Juan Pérez"
+            />
+          </p>
+          <p>
+            <label for="pelicula">Película:</label>
+            <select id="pelicula" name="pelicula">
+              <option value="">-- Elige una película --</option>
+              <option value="dune2">Dune: Parte 2 — $18.000</option>
+              <option value="godzilla">Godzilla vs. Kong — $16.000</option>
+              <option value="insideout2">Inside Out 2 — $15.000</option>
+              <option value="oppenheimer">Oppenheimer — $20.000</option>
+              <option value="lotr">El Señor de los Anillos — $17.000</option>
+            </select>
+          </p>
+          <p>
+            <label for="cantidad">Cantidad de tickets:</label>
+            <input
+              type="number"
+              id="cantidad"
+              name="cantidad"
+              min="1"
+              max="10"
+              placeholder="1"
+            />
+          </p>
+          <p>
+            <label for="edadComprador">Edad del comprador:</label>
+            <input
+              type="number"
+              id="edadComprador"
+              name="edadComprador"
+              min="1"
+              max="120"
+              placeholder="Ej: 22"
+            />
+          </p>
+          <p>
+            <button type="submit">Comprar</button>
+          </p>
+        </form>
       </section>
-
-      <!-- Modos Cine -->
-      <section id="trailer-dune" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Dune: Parte 2</h2><div class="escenario-cine"><span class="crispetas">🍿</span><iframe width="560" height="315" src="https://www.youtube.com/embed/Way9Dexny3w" frameborder="0" allowfullscreen></iframe><span class="crispetas">🍿</span></div></section>
-      <section id="trailer-godzilla" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Godzilla vs. Kong</h2><div class="escenario-cine"><span class="crispetas">🍿</span><iframe width="560" height="315" src="https://www.youtube.com/embed/odM92ap8_c0" frameborder="0" allowfullscreen></iframe><span class="crispetas">🍿</span></div></section>
-      <section id="trailer-insideout" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Inside Out 2</h2><div class="escenario-cine"><span class="crispetas">🍿</span><iframe width="560" height="315" src="https://www.youtube.com/embed/LEjhY15eCx0" frameborder="0" allowfullscreen></iframe><span class="crispetas">🍿</span></div></section>
-      <section id="trailer-oppenheimer" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Oppenheimer</h2><div class="escenario-cine"><span class="crispetas">🍿</span><iframe width="560" height="315" src="https://www.youtube.com/embed/uYPbbksJxIg" frameborder="0" allowfullscreen></iframe><span class="crispetas">🍿</span></div></section>
-      <section id="trailer-lotr" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>El Señor de los Anillos</h2><div class="escenario-cine"><span class="crispetas">🍿</span><iframe width="560" height="315" src="https://www.youtube.com/embed/V75dMMIW2B4" frameborder="0" allowfullscreen></iframe><span class="crispetas">🍿</span></div></section>
-      <section id="trailer-deadpool" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Deadpool & Wolverine</h2><div class="escenario-cine"><span class="crispetas">🍿</span><iframe width="560" height="315" src="https://www.youtube.com/embed/73_1biuggHI" frameborder="0" allowfullscreen></iframe><span class="crispetas">🍿</span></div></section>
-      <section id="trailer-spiderman" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Spider-Man: NWH</h2><div class="escenario-cine"><span class="crispetas">🍿</span><iframe width="560" height="315" src="https://www.youtube.com/embed/rt-2cxcl_Ro" frameborder="0" allowfullscreen></iframe><span class="crispetas">🍿</span></div></section>
-      <section id="trailer-batman" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>The Batman</h2><div class="escenario-cine"><span class="crispetas">🍿</span><iframe width="560" height="315" src="https://www.youtube.com/embed/mqqft2x_Aa4" frameborder="0" allowfullscreen></iframe><span class="crispetas">🍿</span></div></section>
-      <section id="trailer-avatar" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Avatar 2</h2><div class="escenario-cine"><span class="crispetas">🍿</span><iframe width="560" height="315" src="https://www.youtube.com/embed/a8Gx8wiNbs8" frameborder="0" allowfullscreen></iframe><span class="crispetas">🍿</span></div></section>
-      <section id="trailer-avengers" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Avengers Endgame</h2><div class="escenario-cine"><span class="crispetas">🍿</span><iframe width="560" height="315" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allowfullscreen></iframe><span class="crispetas">🍿</span></div></section>
-      <section id="trailer-joker" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Joker</h2><div class="escenario-cine"><span class="crispetas">🍿</span><iframe width="560" height="315" src="https://www.youtube.com/embed/zAGVQLHvwOY" frameborder="0" allowfullscreen></iframe><span class="crispetas">🍿</span></div></section>
-      <section id="trailer-interstellar" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Interstellar</h2><div class="escenario-cine"><span class="crispetas">🍿</span><iframe width="560" height="315" src="https://www.youtube.com/embed/zSWdZVtXT7E" frameborder="0" allowfullscreen></iframe><span class="crispetas">🍿</span></div></section>
-      <section id="trailer-matrix" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>The Matrix</h2><div class="escenario-cine"><span class="crispetas">🍿</span><iframe width="560" height="315" src="https://www.youtube.com/embed/vKQi3bBA1y8" frameborder="0" allowfullscreen></iframe><span class="crispetas">🍿</span></div></section>
-      <section id="trailer-inception" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Inception</h2><div class="escenario-cine"><span class="crispetas">🍿</span><iframe width="560" height="315" src="https://www.youtube.com/embed/YoHD9XEInc0" frameborder="0" allowfullscreen></iframe><span class="crispetas">🍿</span></div></section>
-      <section id="trailer-gladiator" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Gladiator</h2><div class="escenario-cine"><span class="crispetas">🍿</span><iframe width="560" height="315" src="https://www.youtube.com/embed/P5ieIbInFpg" frameborder="0" allowfullscreen></iframe><span class="crispetas">🍿</span></div></section>
-      <section id="trailer-croods" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Los Croods</h2><div class="escenario-cine"><span class="crispetas">🍿</span><iframe width="560" height="315" src="https://www.youtube.com/embed/4fVCKy69zUY" frameborder="0" allowfullscreen></iframe><span class="crispetas">🍿</span></div></section>
-      <section id="trailer-killbill" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Kill Bill</h2><div class="escenario-cine"><span class="crispetas">🍿</span><iframe width="560" height="315" src="https://www.youtube.com/embed/7kSuas6mRpk" frameborder="0" allowfullscreen></iframe><span class="crispetas">🍿</span></div></section>
-      <section id="trailer-lionking" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>El Rey León</h2><div class="escenario-cine"><span class="crispetas">🍿</span><iframe width="560" height="315" src="https://www.youtube.com/embed/lFzVJEksoDY" frameborder="0" allowfullscreen></iframe><span class="crispetas">🍿</span></div></section>
-      <section id="trailer-titanic" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Titanic</h2><div class="escenario-cine"><span class="crispetas">🍿</span><iframe width="560" height="315" src="https://www.youtube.com/embed/CHekzSiZelA" frameborder="0" allowfullscreen></iframe><span class="crispetas">🍿</span></div></section>
-      <section id="trailer-jurassic" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Jurassic Park</h2><div class="escenario-cine"><span class="crispetas">🍿</span><iframe width="560" height="315" src="https://www.youtube.com/embed/lc0UehYemQA" frameborder="0" allowfullscreen></iframe><span class="crispetas">🍿</span></div></section>
+    
+<!-- Modos Cine -->
+      <section id="trailer-dune" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Dune: Parte 2</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/Way9Dexny3w" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
+      <section id="trailer-godzilla" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Godzilla vs. Kong</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/odM92ap8_c0" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
+      <section id="trailer-insideout" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Inside Out 2</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/LEjhY15eCx0" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
+      <section id="trailer-oppenheimer" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Oppenheimer</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/uYPbbksJxIg" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
+      <section id="trailer-lotr" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>El Señor de los Anillos</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/V75dMMIW2B4" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
+      <section id="trailer-deadpool" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Deadpool & Wolverine</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/73_1biuggHI" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
+      <section id="trailer-spiderman" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Spider-Man: NWH</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/rt-2cxcl_Ro" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
+      <section id="trailer-batman" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>The Batman</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/mqqft2x_Aa4" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
+      <section id="trailer-avatar" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Avatar 2</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/a8Gx8wiNbs8" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
+      <section id="trailer-avengers" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Avengers Endgame</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
+      <section id="trailer-joker" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Joker</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/zAGVQLHvwOY" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
+      <section id="trailer-interstellar" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Interstellar</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/zSWdZVtXT7E" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
+      <section id="trailer-matrix" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>The Matrix</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/vKQi3bBA1y8" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
+      <section id="trailer-inception" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Inception</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/YoHD9XEInc0" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
+      <section id="trailer-gladiator" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Gladiator</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/P5ieIbInFpg" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
+      <section id="trailer-croods" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Los Croods</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/4fVCKy69zUY" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
+      <section id="trailer-killbill" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Kill Bill</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/7kSuas6mRpk" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
+      <section id="trailer-lionking" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>El Rey León</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/lFzVJEksoDY" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
+      <section id="trailer-titanic" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Titanic</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/CHekzSiZelA" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
+      <section id="trailer-jurassic" class="modal-cine"><a href="multimedia.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Jurassic Park</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/lc0UehYemQA" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
     </main>
-
     <footer>
       <p>
         &copy; 2026 CineMax CESDE - Introducción a la Programación &nbsp;|&nbsp;
         Todos los derechos reservados
       </p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Script para Efectos Especiales: Rastro de Fantasma y Calaveras -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Script para Efectos Especiales: Rastro de Fantasma -->
     <script>
       // 1. Rastro de Neón (Fantasmas)
       document.addEventListener('mousemove', function(e) {
@@ -240,7 +499,7 @@
           fantasma.remove();
         }, 500);
       });
-
+    
       // 2. Fantasma en los modales (Reemplazo de la calavera)
       document.querySelectorAll('.modal-cine').forEach(modal => {
         let fantasmaContenedor = document.createElement('div');
@@ -251,3 +510,5 @@
     </script>
   </body>
 </html>
+
+

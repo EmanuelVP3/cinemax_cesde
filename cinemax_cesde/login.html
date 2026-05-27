@@ -44,79 +44,102 @@
     </nav>
 
     <main>
-      <!-- Login y Registro lado a lado con Bootstrap Grid -->
-      <div class="row w-100 g-4">
-        <!-- Columna Izquierda: Login -->
-        <div class="col-md-6">
-          <section id="login">
-            <h2>🔐 Iniciar Sesión</h2>
-            <form action="#">
-              <div class="mb-3">
-                <label for="emailLogin" class="form-label">Correo:</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="emailLogin"
-                  placeholder="ejemplo@correo.com"
-                />
+      <section id="auth-section" class="w-100">
+        <div class="row g-4 align-items-center">
+          
+          <!-- Columna Izquierda: Animación / Carrusel Espacial (Estilo Bootstrap) -->
+          <!-- d-none d-md-block oculta esto en celulares para ahorrar espacio -->
+          <div class="col-md-6 d-none d-md-block">
+            <div id="carruselEspacial" class="carousel slide carousel-fade shadow-lg" data-bs-ride="carousel" style="border-radius: 16px; overflow: hidden; border: 1px solid rgba(231, 76, 60, 0.3);">
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                  <img src="https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=800" class="d-block w-100" alt="Espacio 1" style="height: 500px; object-fit: cover;">
+                  <div class="carousel-caption d-none d-md-block" style="background: rgba(0,0,0,0.5); border-radius: 10px; backdrop-filter: blur(4px);">
+                    <h5>🌌 Un Universo de Películas</h5>
+                    <p>Tu viaje estelar comienza aquí.</p>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="https://images.unsplash.com/photo-1440688807730-73e4e2169fb8?w=800" class="d-block w-100" alt="Espacio 2" style="height: 500px; object-fit: cover;">
+                  <div class="carousel-caption d-none d-md-block" style="background: rgba(0,0,0,0.5); border-radius: 10px; backdrop-filter: blur(4px);">
+                    <h5>✨ Experiencia Premium</h5>
+                    <p>La mejor calidad de imagen y sonido.</p>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800" class="d-block w-100" alt="Espacio 3" style="height: 500px; object-fit: cover;">
+                  <div class="carousel-caption d-none d-md-block" style="background: rgba(0,0,0,0.5); border-radius: 10px; backdrop-filter: blur(4px);">
+                    <h5>🚀 Estrenos Exclusivos</h5>
+                    <p>Sé el primero en ver las novedades.</p>
+                  </div>
+                </div>
               </div>
-              <div class="mb-3">
-                <label for="passLogin" class="form-label">Contraseña:</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="passLogin"
-                  placeholder="••••••••"
-                />
-              </div>
-              <p>¿No tienes cuenta? <a href="#registro" class="text-danger">Regístrate aquí</a></p>
-              <div class="d-grid">
-                <button type="submit" class="btn btn-danger rounded-pill fw-bold">Entrar</button>
-              </div>
-            </form>
-          </section>
-        </div>
+            </div>
+          </div>
 
-        <!-- Columna Derecha: Registro -->
-        <div class="col-md-6">
-          <section id="registro">
-            <h2>📝 Registrarse</h2>
-            <form action="#">
-              <div class="mb-3">
-                <label for="nombreReg" class="form-label">Nombre:</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="nombreReg"
-                  placeholder="Tu nombre completo"
-                />
+          <!-- Columna Derecha: Formularios con Pestañas (Tabs) de Bootstrap -->
+          <div class="col-md-6">
+            <div class="bg-glass-card p-4 rounded-4">
+              
+              <!-- Pestañas para cambiar entre Login y Registro -->
+              <ul class="nav nav-pills mb-4 justify-content-center" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active rounded-pill px-4" id="pills-login-tab" data-bs-toggle="pill" data-bs-target="#pills-login" type="button" role="tab" aria-controls="pills-login" aria-selected="true">Iniciar Sesión</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-pill px-4 text-white" id="pills-registro-tab" data-bs-toggle="pill" data-bs-target="#pills-registro" type="button" role="tab" aria-controls="pills-registro" aria-selected="false">Registrarse</button>
+                </li>
+              </ul>
+
+              <!-- Contenido de las pestañas -->
+              <div class="tab-content" id="pills-tabContent">
+                
+                <!-- Formulario de Login -->
+                <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab">
+                  <h3 class="text-center mb-4">🔐 Bienvenido de nuevo</h3>
+                  <form action="#">
+                    <div class="mb-3">
+                      <label for="emailLogin" class="form-label">Correo Electrónico:</label>
+                      <input type="email" class="form-control" id="emailLogin" placeholder="ejemplo@correo.com">
+                    </div>
+                    <div class="mb-4">
+                      <label for="passLogin" class="form-label">Contraseña:</label>
+                      <input type="password" class="form-control" id="passLogin" placeholder="••••••••">
+                    </div>
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-danger rounded-pill fw-bold py-2">Entrar al Sistema</button>
+                    </div>
+                  </form>
+                </div>
+
+                <!-- Formulario de Registro -->
+                <div class="tab-pane fade" id="pills-registro" role="tabpanel" aria-labelledby="pills-registro-tab">
+                  <h3 class="text-center mb-4">📝 Crea tu Cuenta</h3>
+                  <form action="#">
+                    <div class="mb-3">
+                      <label for="nombreReg" class="form-label">Nombre Completo:</label>
+                      <input type="text" class="form-control" id="nombreReg" placeholder="Ej: Carlos López">
+                    </div>
+                    <div class="mb-3">
+                      <label for="emailReg" class="form-label">Correo Electrónico:</label>
+                      <input type="email" class="form-control" id="emailReg" placeholder="ejemplo@correo.com">
+                    </div>
+                    <div class="mb-4">
+                      <label for="passReg" class="form-label">Crea una Contraseña:</label>
+                      <input type="password" class="form-control" id="passReg" placeholder="••••••••">
+                    </div>
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-danger rounded-pill fw-bold py-2">Completar Registro</button>
+                    </div>
+                  </form>
+                </div>
+
               </div>
-              <div class="mb-3">
-                <label for="emailReg" class="form-label">Correo:</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="emailReg"
-                  placeholder="ejemplo@correo.com"
-                />
-              </div>
-              <div class="mb-3">
-                <label for="passReg" class="form-label">Contraseña:</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="passReg"
-                  placeholder="••••••••"
-                />
-              </div>
-              <p>¿Ya tienes cuenta? <a href="#login" class="text-danger">Inicia sesión aquí</a></p>
-              <div class="d-grid">
-                <button type="submit" class="btn btn-danger rounded-pill fw-bold">Crear cuenta</button>
-              </div>
-            </form>
-          </section>
+            </div>
+          </div>
+
         </div>
-      </div>
+      </section>
     </main>
     <footer>
       <p>

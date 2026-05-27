@@ -205,6 +205,14 @@ img {
   border-radius: 8px;
   display: block;
   margin: 10px auto;
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Transición suave para la animación */
+}
+
+/* ANIMACIÓN: Al pasar el mouse, la imagen hace zoom (se acerca) y brilla */
+img:hover {
+  transform: scale(1.05); /* Zoom in */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(231, 76, 60, 0.3); /* Sombra y glow rojo sutil */
+  z-index: 10;
 }
 iframe {
   max-width: 100%;
@@ -212,12 +220,7 @@ iframe {
   display: block;
   margin: 10px auto;
 }
-#login, #registro {
-  display: none;
-}
-#login:target, #registro:target {
-  display: block;
-}
+
 .modal-cine {
   display: none;
 }

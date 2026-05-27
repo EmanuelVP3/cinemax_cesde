@@ -166,6 +166,23 @@ button {
 button:hover {
   background-color: #c0392b;
 }
+
+/* ========== PSEUDOCLASES ADICIONALES ========== */
+
+/* PSEUDOCLASE :focus → Cuando el usuario hace clic en un campo del formulario */
+input:focus, textarea:focus, select:focus {
+  outline: none; /* Quita el borde azul feo del navegador */
+  border-color: #e74c3c; /* Borde rojo */
+  box-shadow: 0 0 8px rgba(231, 76, 60, 0.4); /* GLOW rojo neón */
+}
+
+/* PSEUDOCLASE :active → Cuando el usuario PRESIONA un botón (clic sostenido) */
+button:active,
+.btn-danger:active {
+  transform: scale(0.95); /* Se encoge un poquito */
+  background-color: #a93226; /* Rojo más oscuro */
+  box-shadow: 0 0 5px rgba(231, 76, 60, 0.8); /* Flash de luz */
+}
 footer {
   text-align: center;
   padding: 10px;
@@ -315,12 +332,12 @@ iframe {
 }
 
 .btn-registro {
-  background: rgba(231, 76, 60, 0.3); /* Rojo suave transparente (NO sólido) */
+  background: rgba(231, 76, 60, 0.12); /* Apenas visible, NO se ve como seleccionado */
   color: white;
   text-decoration: none;
   padding: 6px 16px;
   border-radius: 50px;
-  border: 1px solid rgba(231, 76, 60, 0.5);
+  border: 1px solid rgba(231, 76, 60, 0.35);
   font-weight: bold;
   transition: all 0.3s ease;
 }

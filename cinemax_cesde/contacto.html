@@ -19,29 +19,40 @@
         <span style="--i:0">🎬</span>&nbsp;<span style="--i:1">C</span><span style="--i:2">i</span><span style="--i:3">n</span><span style="--i:4">e</span><span style="--i:5">M</span><span style="--i:6">a</span><span style="--i:7">x</span>&nbsp;<span style="--i:8">C</span><span style="--i:9">E</span><span style="--i:10">S</span><span style="--i:11">D</span><span style="--i:12">E</span>
       </h1>
       <p class="lead mb-3">Tu cine favorito - Vive la experiencia en grande</p>
-      <div class="d-flex justify-content-center gap-2">
-        <a href="login.html#login" class="btn-ingresar">Iniciar sesión</a>
-        <a href="login.html#registro" class="btn-registro">Registrarse</a>
-      </div>
+      <div class="d-flex gap-2 justify-content-center justify-content-md-end">
+            <a href="login.html#login" class="btn-auth">Iniciar sesión</a>
+            <a href="login.html#registro" class="btn-auth">Registrarse</a>
+          </div>
     </header>
 
-    <!-- Tu Menú de Navegación con estructura de Píldoras de Bootstrap -->
-    <nav class="py-3 shadow-sm">
-      <div class="container d-flex justify-content-center">
-        <ul class="nav nav-pills gap-2 flex-wrap justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link text-white rounded-pill px-4" href="index.html">Cartelera</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white rounded-pill px-4" href="compra.html">Comprar Tickets</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white rounded-pill px-4" href="multimedia.html">Multimedia</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active rounded-pill px-4" href="contacto.html">Contáctanos</a>
-          </li>
-        </ul>
+    <!-- Nueva Barra de Navegación Transparente -->
+    <nav class="navbar navbar-expand-lg sticky-top shadow-lg" style="background: rgba(10, 10, 18, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(231, 76, 60, 0.2); z-index: 1050;">
+      <div class="container">
+        <!-- Título pequeño que solo aparece en celulares -->
+        <a class="navbar-brand text-white fw-bold d-lg-none" href="index.html">🎬 CineMax</a>
+        
+        <!-- Botón de hamburguesa para móviles -->
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="filter: invert(1) sepia(1) saturate(5) hue-rotate(300deg);"></span>
+        </button>
+        
+        <!-- Contenido de la barra (Enlaces) -->
+        <div class="collapse navbar-collapse justify-content-center" id="menuNavegacion">
+          <ul class="navbar-nav gap-2 text-center mt-3 mt-lg-0 p-2 p-lg-0 rounded-4" style="background: rgba(0,0,0,0.2);">
+            <li class="nav-item">
+              <a class="nav-link text-white rounded-pill px-4 hover-nav" href="index.html">Cartelera</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white rounded-pill px-4 hover-nav" href="compra.html">Comprar Tickets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white rounded-pill px-4 hover-nav" href="multimedia.html">Multimedia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active rounded-pill px-4 fw-bold nav-neon-active" href="contacto.html">Contáctanos</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 

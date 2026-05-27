@@ -546,8 +546,8 @@ iframe {
   position: absolute;
   top: 5%;
   right: 5%;
-  width: 400px;
-  height: 400px;
+  width: 250px;
+  height: 250px;
   background-color: white;
   -webkit-mask-image: radial-gradient(closest-side, black 60%, transparent 100%);
   mask-image: radial-gradient(closest-side, black 60%, transparent 100%);
@@ -568,8 +568,8 @@ iframe {
 
 @keyframes fadeInFantasma {
   0% { opacity: 0; transform: scale(0.5) translateY(50px); }
-  50% { opacity: 1; transform: scale(1.1) translateY(-10px); }
-  100% { opacity: 0.8; transform: scale(1) translateY(0); }
+  50% { opacity: 0.5; transform: scale(1.1) translateY(-10px); }
+  100% { opacity: 0.35; transform: scale(1) translateY(0); }
 }
 
 /* Botones de Autenticación Elegantes (Efecto Humo/Neon) */

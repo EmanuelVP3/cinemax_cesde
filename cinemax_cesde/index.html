@@ -11,47 +11,50 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="text-white text-center py-4">
-      <h1 class="m-0 fw-bolder logo-cinemax display-5">
-        <span style="--i:0">🎬</span>&nbsp;<span style="--i:1">C</span><span style="--i:2">i</span><span style="--i:3">n</span><span style="--i:4">e</span><span style="--i:5">M</span><span style="--i:6">a</span><span style="--i:7">x</span>&nbsp;<span style="--i:8">C</span><span style="--i:9">E</span><span style="--i:10">S</span><span style="--i:11">D</span><span style="--i:12">E</span>
-      </h1>
-      <p class="lead mb-3">Tu cine favorito - Vive la experiencia en grande</p>
-      <div class="d-flex gap-2 justify-content-center d-md-none">
-        <a href="login.html#login" class="btn-auth">Iniciar sesión</a>
-        <a href="login.html#registro" class="btn-auth">Registrarse</a>
-      </div>
-    </header>
-
     <!-- Nueva Barra de Navegación Transparente -->
     <nav class="navbar navbar-expand-lg sticky-top shadow-lg" style="background: rgba(10, 10, 18, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(231, 76, 60, 0.2); z-index: 1050;">
       <div class="container">
-        <!-- Título pequeño que solo aparece en celulares -->
-        <a class="navbar-brand text-white fw-bold d-lg-none" href="index.html">🎬 CineMax</a>
         
         <!-- Botón de hamburguesa para móviles -->
         <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon" style="filter: invert(1) sepia(1) saturate(5) hue-rotate(300deg);"></span>
         </button>
         
-        <!-- Contenido de la barra (Enlaces) -->
-        <div class="collapse navbar-collapse justify-content-center" id="menuNavegacion">
-          <ul class="navbar-nav mx-auto gap-3">
+        <!-- Contenido de la barra (Enlaces y Botones) -->
+        <div class="collapse navbar-collapse d-lg-flex justify-content-lg-between" id="menuNavegacion">
+          <!-- Espaciador invisible para balancear el centro en PC -->
+          <div class="d-none d-lg-block" style="flex: 1;"></div>
+
+          <!-- Enlaces centrados perfectamente -->
+          <ul class="navbar-nav gap-3 text-center">
             <li class="nav-item">
-              <a class="nav-link btn-auth active" href="index.html">Cartelera</a>
+              <a class="nav-link btn-auth active text-nowrap" href="index.html">Cartelera</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link btn-auth text-white" href="compra.html">Comprar Tickets</a>
+              <a class="nav-link btn-auth text-white text-nowrap" href="multimedia.html">Multimedia</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link btn-auth text-white" href="multimedia.html">Multimedia</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link btn-auth text-white" href="contacto.html">Contáctanos</a>
+              <a class="nav-link btn-auth text-white text-nowrap" href="contacto.html">Contáctanos</a>
             </li>
           </ul>
+          
+          <!-- Botón unificado de sesión (Más pequeño) a la derecha -->
+          <div class="d-flex mt-3 mt-lg-0 justify-content-center justify-content-lg-end" style="flex: 1;">
+            <div class="btn-auth d-flex align-items-center p-0 overflow-hidden text-nowrap" style="border-radius: 50px; border-width: 1px; box-shadow: 0 0 10px rgba(255, 107, 107, 0.4);">
+              <a href="login.html#login" class="text-white text-decoration-none px-3 py-1" style="font-size: 0.8rem; border-right: 1px solid rgba(231, 76, 60, 0.4);">Iniciar sesión</a>
+              <a href="login.html#registro" class="text-white text-decoration-none px-3 py-1" style="font-size: 0.8rem;">Registrarse</a>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
+
+    <header class="text-white text-center py-4 mt-3">
+      <h1 class="m-0 fw-bolder logo-cinemax display-5">
+        <span style="--i:0">🎬</span>&nbsp;<span style="--i:1">C</span><span style="--i:2">i</span><span style="--i:3">n</span><span style="--i:4">e</span><span style="--i:5">M</span><span style="--i:6">a</span><span style="--i:7">x</span>&nbsp;<span style="--i:8" class="text-danger">C</span><span style="--i:9" class="text-danger">E</span><span style="--i:10" class="text-danger">S</span><span style="--i:11" class="text-danger">D</span><span style="--i:12" class="text-danger">E</span>
+      </h1>
+      <p class="lead mb-3">Tu cine favorito - Vive la experiencia en grande</p>
+    </header>
 
     <main>
       <section id="multimedia" class="container mt-3 mb-5 position-relative">
@@ -202,6 +205,13 @@
       <section id="trailer-lionking" class="modal-cine"><a href="index.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>El Rey León</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/lFzVJEksoDY" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
       <section id="trailer-titanic" class="modal-cine"><a href="index.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Titanic</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/CHekzSiZelA" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
       <section id="trailer-jurassic" class="modal-cine"><a href="index.html" class="cerrar-cine btn-close-anim">❌ Cerrar</a><h2>Jurassic Park</h2><div class="escenario-cine"><span class="crispetas">🎃</span><iframe width="560" height="315" src="https://www.youtube.com/embed/lc0UehYemQA" frameborder="0" allowfullscreen></iframe><span class="crispetas">🎃</span></div></section>
+
+    <!-- Botón Flotante Comprar Tickets -->
+    <a href="compra.html" class="btn-flotante" title="Comprar Tickets">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5Zm4-1v1h1v-1H4Zm1 3v-1H4v1h1Zm7 0v-1h-1v1h1Zm-1-2h1v-1h-1v1Zm-6 3H4v1h1v-1Zm7 1v-1h-1v1h1Zm-7 1H4v1h1v-1Zm7 1v-1h-1v1h1Zm-8 1v1h1v-1H4Zm7 1h1v-1h-1v1Z"/>
+      </svg>
+    </a>
 
     <footer>
       <p>

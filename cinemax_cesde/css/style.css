@@ -51,7 +51,7 @@ nav a {
   text-decoration: none;
   font-weight: bold;
 }
-nav a:hover, nav a.active {
+nav .nav-link:hover, nav .nav-link.active {
   text-decoration: underline;
   background-color: #e74c3c;
   padding: 5px 10px;
@@ -249,6 +249,12 @@ iframe {
   align-items: center;
   color: white;
 }
+
+/* Oculta la barra de navegación cuando un modal de cine está abierto (Trailers) */
+body:has(.modal-cine:target) nav {
+  display: none !important;
+}
+
 .escenario-cine {
   display: flex;
   align-items: center;
@@ -594,4 +600,39 @@ iframe {
   color: white !important;
   border-color: #ff6b6b !important;
   box-shadow: 0 0 20px rgba(255, 107, 107, 0.8) !important;
+}
+
+/* Botón flotante estilo WhatsApp para Comprar Tickets */
+.btn-flotante {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: rgba(10, 10, 18, 0.95); /* Fondo muy oscuro para contraste */
+  color: white;
+  border: 2px solid #e74c3c; /* Borde rojo */
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  box-shadow: 0 0 15px rgba(231, 76, 60, 0.6); /* Glow rojo */
+  z-index: 1000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  animation: pulsoFlotante 2s infinite;
+}
+
+.btn-flotante:hover {
+  transform: scale(1.15) rotate(10deg);
+  background-color: rgba(231, 76, 60, 0.2); /* Se pone levemente rojo al tocarlo */
+  box-shadow: 0 0 25px rgba(231, 76, 60, 0.9);
+  animation: none; /* Detiene el pulso al pasar el mouse */
+}
+
+@keyframes pulsoFlotante {
+  0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); }
+  70% { box-shadow: 0 0 0 20px rgba(231, 76, 60, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
 }

@@ -13,95 +13,88 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <!-- Tu Cabecera Original con esteroides de Bootstrap -->
-    <header class="text-white text-center py-4">
-      <div class="d-flex gap-2 justify-content-center d-md-none">
-        <a href="login.html#login" class="btn-auth">Iniciar sesión</a>
-        <a href="login.html#registro" class="btn-auth">Registrarse</a>
-      </div>
-    </header>
-
-    <!-- Nueva Barra de Navegación Transparente -->
+    <!-- Nueva Barra de Navegación Transparente (Estilo Top-Bar unificado) -->
     <nav class="navbar navbar-expand-lg sticky-top shadow-lg" style="background: rgba(10, 10, 18, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(231, 76, 60, 0.2); z-index: 1050;">
       <div class="container">
-        <!-- Título en Navbar (Siempre visible) -->
-        <a class="navbar-brand text-white fw-bold" href="index.html">🎬 CineMax CESDE</a>
+        <!-- Logo a la izquierda -->
+        <a class="navbar-brand text-white fw-bold" href="index.html" style="width: 250px;">🎬 CineMax <span class="text-danger">CESDE</span></a>
         
         <!-- Botón de hamburguesa para móviles -->
         <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon" style="filter: invert(1) sepia(1) saturate(5) hue-rotate(300deg);"></span>
         </button>
         
-        <!-- Contenido de la barra (Enlaces) -->
-        <div class="collapse navbar-collapse justify-content-center" id="menuNavegacion">
-          <ul class="navbar-nav mx-auto gap-3">
+        <!-- Contenido de la barra -->
+        <div class="collapse navbar-collapse" id="menuNavegacion">
+          
+          <!-- Enlaces centrados perfectamente con mx-auto -->
+          <ul class="navbar-nav mx-auto gap-3 text-center">
             <li class="nav-item">
-              <a class="nav-link btn-auth text-white" href="index.html">Cartelera</a>
+              <a class="nav-link btn-auth text-white text-nowrap" href="index.html">Cartelera</a>
+            </li>
+            <!-- Botón 'Comprar Tickets' removido del navbar por petición del usuario -->
+            <li class="nav-item">
+              <a class="nav-link btn-auth text-white text-nowrap" href="multimedia.html">Multimedia</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link btn-auth text-white" href="compra.html">Comprar Tickets</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link btn-auth text-white" href="multimedia.html">Multimedia</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link btn-auth active" href="contacto.html">Contáctanos</a>
+              <a class="nav-link btn-auth active text-nowrap" href="contacto.html">Contáctanos</a>
             </li>
           </ul>
+          
+          <!-- Botón unificado de sesión (Ancho fijo para balance) a la derecha -->
+          <div class="d-flex mt-3 mt-lg-0 justify-content-center justify-content-lg-end mx-auto mx-lg-0" style="width: 250px;">
+            <div class="btn-auth d-flex align-items-center p-0 overflow-hidden text-nowrap" style="border-radius: 50px; border-width: 1px; box-shadow: 0 0 10px rgba(255, 107, 107, 0.4);">
+              <a href="login.html#login" class="text-white text-decoration-none px-2 py-1" style="font-size: 0.75rem; border-right: 1px solid rgba(231, 76, 60, 0.4);">Iniciar sesión</a>
+              <a href="login.html#registro" class="text-white text-decoration-none px-2 py-1" style="font-size: 0.75rem;">Registrarse</a>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
 
     <main>
-      <section id="contacto">
-        <h2>✉️ Contáctanos</h2>
-        <p>
-          ¿Tienes alguna duda o sugerencia? Déjanos tu mensaje y te
-          responderemos pronto.
-        </p>
-        <address>
-          📍 Calle 50 #45-30, Medellín, Colombia<br />
-          📞 (604) 123-4567<br />
-          🕐 Lunes a Domingo: 10:00 AM – 11:00 PM
-        </address>
-        <form action="">
-          <div class="mb-3">
-            <label for="nombre" class="form-label">Tu Nombre:</label>
-            <input
-              type="text"
-              class="form-control"
-              id="nombre"
-              name="nombre"
-              placeholder="Ej: María Gómez"
-              required
-            />
+      <section id="contacto" class="container mt-2 mb-2 w-100">
+        <div class="row g-4 align-items-center">
+          <!-- Columna Izquierda: Logo CineMax -->
+          <div class="col-md-6 d-none d-md-block text-center">
+            <h1 class="display-2 fw-bold logo-cinemax mb-3">
+              <span style="--i:0">🎬</span><br>
+              <span style="--i:1">C</span><span style="--i:2">i</span><span style="--i:3">n</span><span style="--i:4">e</span><span style="--i:5">M</span><span style="--i:6">a</span><span style="--i:7">x</span><br>
+              <span class="text-danger" style="--i:8">C</span><span class="text-danger" style="--i:9">E</span><span class="text-danger" style="--i:10">S</span><span class="text-danger" style="--i:11">D</span><span class="text-danger" style="--i:12">E</span>
+            </h1>
+            <p class="lead text-white-50 mt-3">Tu cine favorito - Vive la experiencia en grande</p>
           </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Tu Correo Electrónico:</label>
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              name="email"
-              placeholder="ejemplo@correo.com"
-              required
-            />
+          
+          <!-- Columna Derecha: Formulario Comprimido -->
+          <div class="col-md-6">
+            <div class="bg-glass-card p-3 rounded-4">
+              <h2 class="mb-2 text-center fs-3">✉️ Contáctanos</h2>
+              
+              <address class="mb-3 text-center small text-white-50">
+                📍 Calle 50 #45-30, Medellín | 📞 (604) 123-4567<br />
+                🕐 Lunes a Domingo: 10:00 AM – 11:00 PM
+              </address>
+              
+              <form action="">
+                <div class="mb-2">
+                  <label for="nombre" class="form-label small mb-1">Tu Nombre:</label>
+                  <input type="text" class="form-control form-control-sm" id="nombre" name="nombre" placeholder="Ej: María Gómez" required />
+                </div>
+                <div class="mb-2">
+                  <label for="email" class="form-label small mb-1">Tu Correo Electrónico:</label>
+                  <input type="email" class="form-control form-control-sm" id="email" name="email" placeholder="ejemplo@correo.com" required />
+                </div>
+                <div class="mb-3">
+                  <label for="mensaje" class="form-label small mb-1">Tu Mensaje:</label>
+                  <textarea class="form-control form-control-sm" id="mensaje" name="mensaje" rows="2" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-danger rounded-pill fw-bold">Enviar Mensaje</button>
+                </div>
+              </form>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="mensaje" class="form-label">Tu Mensaje:</label>
-            <textarea
-              class="form-control"
-              id="mensaje"
-              name="mensaje"
-              rows="5"
-              placeholder="Escribe tu mensaje aquí..."
-              required
-            ></textarea>
-          </div>
-          <div class="d-grid">
-            <button type="submit" class="btn btn-danger rounded-pill fw-bold">Enviar Mensaje</button>
-          </div>
-        </form>
+        </div>
       </section>
     </main>
     <footer>

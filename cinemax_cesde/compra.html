@@ -13,47 +13,46 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <!-- Cabecera con Bootstrap -->
-    <header class="text-white text-center py-4">
-
-      <div class="d-flex gap-2 justify-content-center d-md-none">
-        <a href="login.html#login" class="btn-auth">Iniciar sesión</a>
-        <a href="login.html#registro" class="btn-auth">Registrarse</a>
-      </div>
-    </header>
-
-    <!-- Nueva Barra de Navegación Transparente -->
+    <!-- Nueva Barra de Navegación Transparente (Estilo Top-Bar unificado) -->
     <nav class="navbar navbar-expand-lg sticky-top shadow-lg" style="background: rgba(10, 10, 18, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(231, 76, 60, 0.2); z-index: 1050;">
       <div class="container">
-        <!-- Título en Navbar (Siempre visible) -->
-        <a class="navbar-brand text-white fw-bold" href="index.html">🎬 CineMax CESDE</a>
+        <!-- Logo a la izquierda -->
+        <a class="navbar-brand text-white fw-bold" href="index.html" style="width: 250px;">🎬 CineMax <span class="text-danger">CESDE</span></a>
         
         <!-- Botón de hamburguesa para móviles -->
         <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon" style="filter: invert(1) sepia(1) saturate(5) hue-rotate(300deg);"></span>
         </button>
         
-        <!-- Contenido de la barra (Enlaces) -->
-        <div class="collapse navbar-collapse justify-content-center" id="menuNavegacion">
-          <ul class="navbar-nav mx-auto gap-3">
+        <!-- Contenido de la barra -->
+        <div class="collapse navbar-collapse" id="menuNavegacion">
+          
+          <!-- Enlaces centrados perfectamente con mx-auto -->
+          <ul class="navbar-nav mx-auto gap-3 text-center">
             <li class="nav-item">
-              <a class="nav-link btn-auth text-white" href="index.html">Cartelera</a>
+              <a class="nav-link btn-auth text-white text-nowrap" href="index.html">Cartelera</a>
+            </li>
+            <!-- Botón 'Comprar Tickets' removido del navbar por petición del usuario -->
+            <li class="nav-item">
+              <a class="nav-link btn-auth text-white text-nowrap" href="multimedia.html">Multimedia</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link btn-auth active" href="compra.html">Comprar Tickets</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link btn-auth text-white" href="multimedia.html">Multimedia</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link btn-auth text-white" href="contacto.html">Contáctanos</a>
+              <a class="nav-link btn-auth text-white text-nowrap" href="contacto.html">Contáctanos</a>
             </li>
           </ul>
+          
+          <!-- Botón unificado de sesión (Ancho fijo para balance) a la derecha -->
+          <div class="d-flex mt-3 mt-lg-0 justify-content-center justify-content-lg-end mx-auto mx-lg-0" style="width: 250px;">
+            <div class="btn-auth d-flex align-items-center p-0 overflow-hidden text-nowrap" style="border-radius: 50px; border-width: 1px; box-shadow: 0 0 10px rgba(255, 107, 107, 0.4);">
+              <a href="login.html#login" class="text-white text-decoration-none px-2 py-1" style="font-size: 0.75rem; border-right: 1px solid rgba(231, 76, 60, 0.4);">Iniciar sesión</a>
+              <a href="login.html#registro" class="text-white text-decoration-none px-2 py-1" style="font-size: 0.75rem;">Registrarse</a>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
     <main>
-      <section id="compra" class="container mt-5 mb-5 w-100">
+      <section id="compra" class="container mt-2 mb-3 w-100">
         <div class="row g-4 align-items-center">
           
           <!-- Columna Izquierda: Logo CineMax -->
@@ -61,7 +60,7 @@
             <h1 class="display-2 fw-bold logo-cinemax mb-4">
               <span style="--i:0">🎬</span><br>
               <span style="--i:1">C</span><span style="--i:2">i</span><span style="--i:3">n</span><span style="--i:4">e</span><span style="--i:5">M</span><span style="--i:6">a</span><span style="--i:7">x</span><br>
-              <span class="fs-2" style="--i:8">C</span><span class="fs-2" style="--i:9">E</span><span class="fs-2" style="--i:10">S</span><span class="fs-2" style="--i:11">D</span><span class="fs-2" style="--i:12">E</span>
+              <span class="text-danger" style="--i:8">C</span><span class="text-danger" style="--i:9">E</span><span class="text-danger" style="--i:10">S</span><span class="text-danger" style="--i:11">D</span><span class="text-danger" style="--i:12">E</span>
             </h1>
             <p class="lead text-white-50 mt-4">Tu cine favorito - Vive la experiencia en grande</p>
           </div>
@@ -110,7 +109,7 @@
                   <input type="number" class="form-control" id="edadComprador" name="edadComprador" min="1" max="120" placeholder="Ej: 22" />
                 </div>
                 <div class="d-grid">
-                  <button type="submit" class="btn btn-danger rounded-pill fw-bold py-2">Procesar Compra</button>
+                  <button type="submit" class="btn btn-danger rounded-pill fw-bold">Procesar Compra</button>
                 </div>
               </form>
             </div>

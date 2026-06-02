@@ -137,20 +137,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <!-- Script mínimo para cambiar de pestaña según el botón presionado en la barra -->
-    <script>
-      function activarPestana() {
-        if (window.location.hash === "#registro") {
-          var tabRegistro = new bootstrap.Tab(document.querySelector('#pills-registro-tab'));
-          tabRegistro.show();
-        } else if (window.location.hash === "#login") {
-          var tabLogin = new bootstrap.Tab(document.querySelector('#pills-login-tab'));
-          tabLogin.show();
-        }
-      }
-      // Ejecutar cuando carga la página o cuando se hace clic en el enlace
-      window.addEventListener("DOMContentLoaded", activarPestana);
-      window.addEventListener("hashchange", activarPestana);
-    </script>
+
   </body>
 </html>

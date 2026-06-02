@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -1041,41 +1041,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Script para Efectos Especiales: Rastro de Fantasma y Calaveras -->
-    <script>
-      // 1. Rastro de Neón (Fantasmas)
-      document.addEventListener("mousemove", function (e) {
-        let fantasma = document.createElement("div");
-        fantasma.textContent = "👻";
-        fantasma.style.position = "absolute";
-        fantasma.style.left = e.pageX - 12 + "px";
-        fantasma.style.top = e.pageY - 12 + "px";
-        fantasma.style.color = "transparent";
-        fantasma.style.textShadow = "0 0 10px #e74c3c, 0 0 20px #e74c3c";
-        fantasma.style.fontSize = "24px";
-        fantasma.style.pointerEvents = "none";
-        fantasma.style.transition = "all 0.5s ease-out";
-        fantasma.style.zIndex = "9999";
-        document.body.appendChild(fantasma);
 
-        setTimeout(() => {
-          fantasma.style.opacity = "0";
-          fantasma.style.transform = "translateY(-30px) scale(1.5)";
-        }, 10);
-
-        setTimeout(() => {
-          fantasma.remove();
-        }, 500);
-      });
-
-      // 2. Fantasma en los modales (Reemplazo de la calavera)
-      document.querySelectorAll(".modal-cine").forEach((modal) => {
-        let fantasmaContenedor = document.createElement("div");
-        fantasmaContenedor.className = "fantasma-animado-contenedor";
-        fantasmaContenedor.innerHTML =
-          '<img src="media/scary_movie.png" alt="Fantasma">';
-        modal.appendChild(fantasmaContenedor);
-      });
-    </script>
   </body>
 </html>
+

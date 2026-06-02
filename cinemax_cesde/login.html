@@ -14,35 +14,71 @@
   </head>
   <body>
     <!-- Nueva Barra de Navegación Transparente (Estilo Top-Bar unificado) -->
-    <nav class="navbar navbar-expand-lg sticky-top shadow-lg" style="background: rgba(10, 10, 18, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(231, 76, 60, 0.2); z-index: 1050;">
+    <nav
+      class="navbar navbar-expand-lg sticky-top shadow-lg"
+      style="
+        background: rgba(10, 10, 18, 0.7);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-bottom: 1px solid rgba(231, 76, 60, 0.2);
+        z-index: 1050;
+      "
+    >
       <div class="container">
         <!-- Logo a la izquierda -->
-        <a class="navbar-brand text-white fw-bold" href="index.html" style="width: 250px;">🎬 CineMax <span class="text-danger">CESDE</span></a>
-        
+        <a
+          class="navbar-brand text-white fw-bold"
+          href="index.html"
+          style="width: 250px"
+          >🎬 CineMax <span class="text-danger">CESDE</span></a
+        >
+
         <!-- Botón de hamburguesa para móviles -->
-        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon" style="filter: invert(1) sepia(1) saturate(5) hue-rotate(300deg);"></span>
+        <button
+          class="navbar-toggler border-0 shadow-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menuNavegacion"
+          aria-controls="menuNavegacion"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span
+            class="navbar-toggler-icon"
+            style="filter: invert(1) sepia(1) saturate(5) hue-rotate(300deg)"
+          ></span>
         </button>
-        
+
         <!-- Contenido de la barra -->
         <div class="collapse navbar-collapse" id="menuNavegacion">
-          
           <!-- Enlaces centrados perfectamente con mx-auto -->
           <ul class="navbar-nav mx-auto gap-3 text-center">
             <li class="nav-item">
-              <a class="nav-link btn-auth text-white text-nowrap" href="index.html">Cartelera</a>
+              <a
+                class="nav-link btn-auth text-white text-nowrap"
+                href="index.html"
+                >Cartelera</a
+              >
             </li>
             <!-- Botón 'Comprar Tickets' removido del navbar por petición del usuario -->
             <li class="nav-item">
-              <a class="nav-link btn-auth text-white text-nowrap" href="multimedia.html">Multimedia</a>
+              <a
+                class="nav-link btn-auth text-white text-nowrap"
+                href="multimedia.html"
+                >Multimedia</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link btn-auth text-white text-nowrap" href="contacto.html">Contáctanos</a>
+              <a
+                class="nav-link btn-auth text-white text-nowrap"
+                href="contacto.html"
+                >Contáctanos</a
+              >
             </li>
           </ul>
-          
+
           <!-- Bloque fantasma (Ancho fijo para balance) a la derecha para empujar el centro a la perfección -->
-          <div class="d-none d-lg-block" style="width: 250px;"></div>
+          <div class="d-none d-lg-block" style="width: 250px"></div>
         </div>
       </div>
     </nav>
@@ -50,86 +86,177 @@
     <main>
       <section id="auth-section" class="w-100">
         <div class="row g-4 align-items-center">
-          
           <!-- Columna Izquierda: Logo CineMax -->
           <div class="col-md-6 d-none d-md-block text-center">
             <h1 class="display-2 fw-bold logo-cinemax mb-4">
-              <span style="--i:0">🎬</span><br>
-              <span style="--i:1">C</span><span style="--i:2">i</span><span style="--i:3">n</span><span style="--i:4">e</span><span style="--i:5">M</span><span style="--i:6">a</span><span style="--i:7">x</span><br>
-              <span class="text-danger" style="--i:8">C</span><span class="text-danger" style="--i:9">E</span><span class="text-danger" style="--i:10">S</span><span class="text-danger" style="--i:11">D</span><span class="text-danger" style="--i:12">E</span>
+              <span style="--i: 0">🎬</span><br />
+              <span style="--i: 1">C</span><span style="--i: 2">i</span
+              ><span style="--i: 3">n</span><span style="--i: 4">e</span
+              ><span style="--i: 5">M</span><span style="--i: 6">a</span
+              ><span style="--i: 7">x</span><br />
+              <span class="text-danger" style="--i: 8">C</span
+              ><span class="text-danger" style="--i: 9">E</span
+              ><span class="text-danger" style="--i: 10">S</span
+              ><span class="text-danger" style="--i: 11">D</span
+              ><span class="text-danger" style="--i: 12">E</span>
             </h1>
-            <p class="lead text-white-50 mt-4">Tu cine favorito - Vive la experiencia en grande</p>
+            <p class="lead text-white-50 mt-4">
+              Tu cine favorito - Vive la experiencia en grande
+            </p>
           </div>
 
           <!-- Columna Derecha: Formularios con Pestañas (Tabs) de Bootstrap -->
           <div class="col-md-6">
             <div class="bg-glass-card p-4 rounded-4">
-              
               <!-- Pestañas para cambiar entre Login y Registro -->
-              <ul class="nav nav-pills mb-4 justify-content-center" id="pills-tab" role="tablist">
+              <ul
+                class="nav nav-pills mb-4 justify-content-center"
+                id="pills-tab"
+                role="tablist"
+              >
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link active rounded-pill px-4" id="pills-login-tab" data-bs-toggle="pill" data-bs-target="#pills-login" type="button" role="tab" aria-controls="pills-login" aria-selected="true">Iniciar Sesión</button>
+                  <button
+                    class="nav-link active rounded-pill px-4"
+                    id="pills-login-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-login"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-login"
+                    aria-selected="true"
+                  >
+                    Iniciar Sesión
+                  </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link rounded-pill px-4 text-white" id="pills-registro-tab" data-bs-toggle="pill" data-bs-target="#pills-registro" type="button" role="tab" aria-controls="pills-registro" aria-selected="false">Registrarse</button>
+                  <button
+                    class="nav-link rounded-pill px-4 text-white"
+                    id="pills-registro-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-registro"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-registro"
+                    aria-selected="false"
+                  >
+                    Registrarse
+                  </button>
                 </li>
               </ul>
 
               <!-- Contenido de las pestañas -->
               <div class="tab-content" id="pills-tabContent">
-                
                 <!-- Formulario de Login -->
-                <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab">
+                <div
+                  class="tab-pane fade show active"
+                  id="pills-login"
+                  role="tabpanel"
+                  aria-labelledby="pills-login-tab"
+                >
                   <h3 class="text-center mb-4">🔐 Bienvenido de nuevo</h3>
                   <form action="#">
                     <div class="mb-3">
-                      <label for="emailLogin" class="form-label">Correo Electrónico:</label>
-                      <input type="email" class="form-control" id="emailLogin" placeholder="ejemplo@correo.com">
+                      <label for="emailLogin" class="form-label"
+                        >Correo Electrónico:</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="emailLogin"
+                        placeholder="ejemplo@correo.com"
+                      />
                     </div>
                     <div class="mb-4">
-                      <label for="passLogin" class="form-label">Contraseña:</label>
-                      <input type="password" class="form-control" id="passLogin" placeholder="••••••••">
+                      <label for="passLogin" class="form-label"
+                        >Contraseña:</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="passLogin"
+                        placeholder="••••••••"
+                      />
                     </div>
                     <div class="d-grid">
-                      <button type="submit" class="btn btn-danger rounded-pill fw-bold">Entrar al Sistema</button>
+                      <button
+                        type="submit"
+                        class="btn btn-danger rounded-pill fw-bold"
+                      >
+                        Entrar al Sistema
+                      </button>
                     </div>
                   </form>
                 </div>
 
                 <!-- Formulario de Registro -->
-                <div class="tab-pane fade" id="pills-registro" role="tabpanel" aria-labelledby="pills-registro-tab">
+                <div
+                  class="tab-pane fade"
+                  id="pills-registro"
+                  role="tabpanel"
+                  aria-labelledby="pills-registro-tab"
+                >
                   <h3 class="text-center mb-4">📝 Crea tu Cuenta</h3>
                   <form action="#">
                     <div class="mb-3">
-                      <label for="nombreReg" class="form-label">Nombre Completo:</label>
-                      <input type="text" class="form-control" id="nombreReg" placeholder="Ej: Carlos López">
+                      <label for="nombreReg" class="form-label"
+                        >Nombre Completo:</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="nombreReg"
+                        placeholder="Ej: Carlos López"
+                      />
                     </div>
                     <div class="mb-3">
-                      <label for="emailReg" class="form-label">Correo Electrónico:</label>
-                      <input type="email" class="form-control" id="emailReg" placeholder="ejemplo@correo.com">
+                      <label for="emailReg" class="form-label"
+                        >Correo Electrónico:</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="emailReg"
+                        placeholder="ejemplo@correo.com"
+                      />
                     </div>
                     <div class="mb-4">
-                      <label for="passReg" class="form-label">Crea una Contraseña:</label>
-                      <input type="password" class="form-control" id="passReg" placeholder="••••••••">
+                      <label for="passReg" class="form-label"
+                        >Crea una Contraseña:</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="passReg"
+                        placeholder="••••••••"
+                      />
                     </div>
                     <div class="d-grid">
-                      <button type="submit" class="btn btn-danger rounded-pill fw-bold">Completar Registro</button>
+                      <button
+                        type="submit"
+                        class="btn btn-danger rounded-pill fw-bold"
+                      >
+                        Completar Registro
+                      </button>
                     </div>
                   </form>
                 </div>
-
               </div>
             </div>
           </div>
-
         </div>
       </section>
     </main>
     <footer>
       <p>
-        &copy; 2026 CineMax CESDE - Introducción a la Programación &nbsp;|&nbsp; Dev: 
-        <a href="https://github.com/EmanuelVP3" target="_blank" class="text-danger text-decoration-none fw-bold">Emanuel VP</a> &nbsp;|&nbsp;
-        Todos los derechos reservados
+        &copy; 2026 CineMax CESDE - Introducción a la Programación &nbsp;|&nbsp;
+        Dev:
+        <a
+          href="https://github.com/EmanuelVP3"
+          target="_blank"
+          class="text-danger text-decoration-none fw-bold"
+          >Emanuel VP</a
+        >
+        &nbsp;|&nbsp; Todos los derechos reservados
       </p>
     </footer>
     <script
@@ -137,6 +264,5 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-
   </body>
 </html>
